@@ -1,0 +1,447 @@
+@charset "utf-8";
+@charset "utf-8";
+
+/*****************css*****reset*********************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,  pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td ,input {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-family:"微軟正黑體",Arial;
+	font-weight: normal;		
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+body.introBody {
+	
+}
+
+h1,h2,h3,h4,h5,h6,p,a,td,li{
+	word-break: break-all;
+}
+
+img {
+	border:0;
+}
+
+p {
+   font-size:14px;
+}
+	
+a {
+	text-decoration:none;/* 去連結底線 */	
+	behavior:expression(this.onFocus=this.blur()); /* for IE */
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+ 
+/* remember to highlight inserts somehow! */
+
+del {
+    text-decoration: line-through;
+}
+ 
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+	border:none;	
+	outline:none;
+}
+
+input[type="button"] {
+	cursor:pointer;	
+}
+
+.clear {
+	clear:both;
+	height:0;
+}
+
+/****************end*css*****reset*********************/
+
+
+body{
+	background-color:#3f3f3f;
+}
+
+
+.in-big-box2{
+	width:100%;
+	height:auto;
+	float:left;
+	text-align:center;
+	}
+
+.in-big-box-con2{
+	display: inline-block;
+	width:675px;
+	height:auto;
+	margin-bottom:50px;
+
+	}
+	
+.x-line{
+	width:100%;
+	height:100px;
+	float:left;
+	margin:0px 0px 0px 0px;
+	background-color: #222;
+	line-height:103px;
+	font-family:"微軟正黑體", Arial;
+	font-size:42px;
+	font-weight:bold;
+	color:#FFF;
+	}
+	
+	
+.con-box1{
+	width:675px;
+	height:auto;
+	float:left;
+	background-color:#505050;
+	margin:30px auto 0px auto;
+	padding-top:33px;
+	padding-bottom:70px;
+	}	
+	
+.con-box1-s{
+	width:610px;
+	height:38px;
+	float:left;
+	margin:5px 0px 0px 58px;
+	}	
+	
+.coninput1{
+	width:225px;
+	height:25px;
+	float:left;
+	text-indent:5px;
+	font-size:14px;
+	letter-spacing:1px;
+	}
+	
+.con-box1-s span{
+	width:50px;
+	height:25px;
+	float:left;
+	color:#FFF;
+	}	
+
+
+.coninput2{
+	width:105px;
+	height:25px;
+	float:left;
+	text-indent:5px;
+	font-size:14px;
+	letter-spacing:1px;
+	text-align:center;
+	}
+	
+.btn1{
+	width:120px;
+	height:25px;
+	float:left;
+	background-color: #ef8200;
+	color:#FFF;
+	line-height:26px;
+	cursor:pointer;
+	font-size:16px;
+	}	
+	
+.btn1:hover{
+	background-color: #FC0;
+	color:#000;
+	}	
+	
+.btn2{
+	width:auto;
+	height:35px;
+	float:left;
+	background-color: #FC0;
+	color:#000;
+	line-height:36px;
+	font-size:22px;
+	font-family:"微軟正黑體", Arial;
+	cursor:pointer;
+	margin:30px 0px 0px 250px;
+	font-weight:bold;
+	}	
+	
+.btn2 a:hover{
+	background-color: #ef8200;
+	color:#FFF;
+	display:block;
+	}	
+
+.btn2 a{
+	width:auto;
+	height:35px;
+	background-color: #FC0;
+	display:block;
+	padding:0px 15px;
+	color:#000;
+	line-height:36px;
+	font-size:22px;
+	font-family:"微軟正黑體", Arial;
+	cursor:pointer;
+	font-weight:bold;
+	}	
+	
+	
+.con-box2{
+	width:305px;
+	height:auto;
+	float:left;
+	margin:30px 10px 0px 10px;
+	padding-top:0px;
+	padding-bottom:70px;
+	}		
+	
+.con-box2-s1{
+	width:280px;
+	height:auto;
+	float:left;
+	margin:0px 0px 30px 12px; 
+	font-family:"微軟正黑體", Arial;
+	}	
+	
+.con-box2-s1-box{
+	width:auto;
+	height:35px;
+	float:left;
+	background-color:#F90;
+	margin:0px 0px 0px 15px;
+	font-size:15px;
+	line-height:34px;
+	position:absolute;
+	z-index:999;
+	padding:0px 19px;
+	font-weight:bold;
+	color: #333;
+	}
+
+.con-box2-s1-boxcon{
+	width:259px;
+	height:auto;
+	float:left;
+	border:#F90 1px solid;
+	margin-top:20px;
+	background-color:#373636;
+	padding:20px 0px 10px 19px;
+	}
+
+.con-box2-s1-boxcon input{
+	width:250px;
+	height:30px;
+	float:left;
+	text-align:left;
+	border:none;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:1px;
+	color:#FFF;
+	background-color:transparent;
+	}
+
+.con-box2-txt1{
+	width:240px;
+	height:auto;
+	float:left;
+	text-align:left;
+	color:#FF0;
+	font-size:14px;
+	}
+	
+.con-box2-txt2{
+	width:240px;
+	height:auto;
+	float:left;
+	text-align:left;
+	color:#FFF;
+	font-size:14px;
+	margin-bottom:20px;
+	}
+
+
+.btn3{
+	width:265px;
+	height:40px;
+	float:left;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #FFCC00 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #FFCC00 100%);
+	
+	/* Opera */ 
+	background-image: -o-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #FFCC00 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, center center, 0, center center, 505, color-stop(0, #EFECBF), color-stop(1, #FFCC00));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #FFCC00 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: radial-gradient(circle farthest-corner at center, #EFECBF 0%, #FFCC00 100%);
+	color:#000;
+	line-height:39px;
+	font-size:22px;
+	font-family:"微軟正黑體", Arial;
+	cursor:pointer;
+	margin:0px 0px 20px 19px;
+	font-weight:bold;
+	}	
+	
+.btn3:hover{
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #EF8200 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #EF8200 100%);
+	
+	/* Opera */ 
+	background-image: -o-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #EF8200 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, center center, 0, center center, 505, color-stop(0, #EFECBF), color-stop(1, #EF8200));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(center, circle farthest-corner, #EFECBF 0%, #EF8200 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: radial-gradient(circle farthest-corner at center, #EFECBF 0%, #EF8200 100%);
+	color:#000;
+	}
+
+.txt3{
+	font-size:14px; color: #FF0; text-align:left; text-indent:3px;}
+	
+		
+	
+	
+.footer-box{
+	width:100%;
+	height:auto;
+	float:left;
+	text-align:center;
+	position:fixed;
+	bottom: 0px;
+	background-color:#222;
+	}
+
+.footer-box-con{
+	display: inline-block;
+	width:1062px;
+	height:auto;
+	padding-top:15px;
+	font-size:12px;
+	color:#777;
+	padding-bottom:55px;
+	}
+
+
+.big_tit{
+	width:980px;
+	height:30px;
+	float:left;
+	font-family:"微軟正黑體", Arial;
+	font-size:18px;
+	color:#FFF;
+	text-align:left;
+	text-indent:16px;
+	}
+
+.nav_box{
+	width:960px;
+	height:auto;
+	float:left;
+	margin:0px 0px 35px 0px;
+	border:#333 1px solid;
+	padding:5px 5px;
+	}
+
+.nav_box a{ 
+	width: 142px;
+	height: 46px;
+	border: 2px solid #dedede;
+	background: #fff;
+	float: left;
+	margin: 8px 5px 8px 8px;
+	text-align: center;
+	line-height: 46px;
+	font-size: 15px;
+	cursor: pointer;
+	color:#333;
+	}
+	
+.nav_box a:hover{
+	border:#F93 2px solid;} 
+
+.nav_box img{ margin-right:5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

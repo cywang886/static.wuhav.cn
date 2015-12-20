@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITLE}</title>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript">
+var $PayTypeAry = new Array();
+var $MoneyAry   = new Array();
+
+function DescChk(val){
+	for($i in $PayTypeAry){
+		$v = $PayTypeAry[$i];
+		document.getElementById('desc_'+ $v).style.display = "none";
+	}
+	document.getElementById('paytype_'+ val).checked = "checked"
+	document.getElementById('desc_'+ val).style.display = "";
+	ShowMoney(val);
+}
+function ShowMoney(val){
+	for($i in $MoneyAry){
+		$v = $MoneyAry[$i];
+		document.getElementById('money_'+ $v).style.display = "none";
+	}
+	if(document.getElementById('money_'+ val) != null) document.getElementById('money_'+ val).style.display = "";
+}
+function FormChk(){
+	var fm = document.getElementById("form1");
+	if(fm.agreeRule.checked)	fm.ok.disabled = "";
+	else				fm.ok.disabled = "disabled";
+}
+function form1Chk(){
+	var fm = document.getElementById("form1");
+	if(!fm.agreeRule.checked) { alert("請先確定已閱讀「儲值條例說明」，並同意其內容！"); return false; }
+	fm.submit();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0">
+<!-- INCLUDE BLOCK : WEB_HEAD -->
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr>
+    <td valign="top" class="login_tis">
+    <!-- INCLUDE BLOCK : WEB_LOGIN -->
+    </td>
+    <td width="770" valign="top" bgcolor="#FFFFFF"><br>
+      <table border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/pic_stored-value.jpg" width="300" height="55" /></td>
+          <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/pic.jpg" width="440" height="55" /></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2"></td>
+        </tr>
+      </table>
+      <br />
+      <table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit_down.jpg" width="108" height="33" hspace="5" /></td>
+              <td><a href="atm.php"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_up.jpg" width="108" height="33" border="0" onmouseover="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_down.jpg'" onmouseout="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_up.jpg'" /></a></td>
+              <td><a href="cred_tip.php"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_up.jpg" width="133" height="33" hspace="5" border="0" onmouseover="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_down.jpg'" onmouseout="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_up.jpg'" /></a></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td valign="top" class="main_line">
+          <br />
+           <form id="form1" name="form1" method="post" action="cred_step2.php">
+            <table border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><table border="0" cellpadding="10" cellspacing="0">
+		  <tr>
+                  <!-- START BLOCK : PAYTYPE_DATA -->
+                  <td align="center"><a href="javascript:DescChk('{PAYTYPE}');"><img src="http://www.cdcnli.com/direct/sites/jo888/images/pay_credcard_{PAYTYPE}.jpg" alt="{NAME}" name="creditcard" width="135" height="95" border="0" id="creditcard" /></a><br />
+                  <input type="radio" name="paytype" id="paytype_{PAYTYPE}" value="{PAYTYPE}" onclick="javascript:DescChk('{PAYTYPE}')" {checked} /></td>
+                  <script> $PayTypeAry.push("{PAYTYPE}");</script>
+                  {TR}
+                  <!-- END BLOCK : PAYTYPE_DATA -->
+		  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30" align="center" class="text-3" bgcolor="#e4e4e4">溫馨提示 : 台幣 1 元可以購買 1 點遊戲點數唷 !!</td>
+            </tr>
+            </table>
+            <br />
+               <!-- START BLOCK : PCdata -->
+                <table width="650" border="0" align="center" cellpadding="0" cellspacing="0" id="desc_{PAYTYPE}" style="display:{DISPLAY}">
+                  <tr>
+                    <td class="main_title_subject"><img src="http://www.cdcnli.com/direct/sites/jo888/images/main_title_subject.jpg" width="71" height="34" align="absmiddle">{NAME}</td>
+                  </tr>
+                  <tr>
+                    <td class="main_tis">{NOTES}</td>
+                  </tr>
+                  {TRTDTABLES}
+                  <!-- START BLOCK : PTdata -->
+                  <tr>
+                    <td bgcolor="#e4e4e4"><input type="radio" name="mpid_{SPAYTYPE}" value="{SVAL}" onclick="ShowMoney('{SPAYTYPE}{SSUBTYPE}');" />{SNAME}{SNOTES}</td>
+                  </tr>
+                  <!-- END BLOCK : PTdata -->
+                  {TRTDTABLEE}
+                </table>
+                <!-- END BLOCK : PCdata -->
+             <br />
+            <!-- START BLOCK : NPTdata_1 -->
+            <table width="650" border="0" align="center" cellpadding="0" cellspacing="1" id="money_{PS_TYPE}" style="display:{DISPLAY}">
+                  <tr>
+                    <td height="27" colspan="2" class="main_title_subject"><img src="http://www.cdcnli.com/direct/sites/jo888/images/main_title_subject.jpg" width="71" height="34" align="absmiddle">儲值額度</td>
+                  </tr>
+                  <!-- START BLOCK : NPTdata_2 -->
+                  <tr class="main_table_tit_1">
+                    <td width="150" height="25" class="main_table_tit"><input type="radio" name="amount" id="amount" value="{CASH}" /> 台幣 {CASH2} 元</td>
+                    <td>&nbsp;&nbsp; 兌換 {TALAMOUNT} 點遊戲點數 {BONUS}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" bgcolor="#e4e4e4" height="1"></td>
+                  </tr>
+                  <!-- END BLOCK : NPTdata_2 -->
+            </table>
+            <script> $MoneyAry.push("{PS_TYPE}");</script>
+            <!-- END BLOCK : NPTdata_1 -->
+
+            <p>&nbsp;</p>
+            <table width="650" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+              <tr>
+                <td height="50"><input type="checkbox" name="agreeRule" id="agreeRule" onclick="javascript:FormChk();" /> 我已詳細閱讀「儲值條例說明」，並同意其內容。</td>
+              </tr>
+              <tr>
+                <td align="center"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_cred_conf.png" onclick="return form1Chk()" alt="{_Sure}" name="ok" width="92" height="38" border="0" style="cursor: pointer" /></td>
+              </tr>
+            </table>
+            <br />
+           </form>
+          </td>
+        </tr>
+      </table>
+    <br /></td>
+  </tr>
+</table>
+</body>
+</html>

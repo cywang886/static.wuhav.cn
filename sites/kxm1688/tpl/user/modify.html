@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+    <!-- INCLUDE BLOCK : WEB_HEAD -->	
+    <div class="info-top-box3">
+    	<div class="not-top-box3-con"></div>
+    </div>
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_MEMBERs3}</a>
+            </div>
+    
+    		<div class="zhenren">
+                   
+				<div class="j1-box">
+                
+                	<div class="j1-box-left">
+                    	<div class="j1-box-left-title">{_MEMBERs}<span>{_MEMBERsE}</span></div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="info.php"><span>{_MEMBERs1}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="chgpwd.php"><span>{_MEMBERs2}</span></a>
+                        </div>           
+                        
+                        <div class="info-left-btn1">
+                            <span>{_MEMBERs3}</span>
+                        </div>
+                        <div class="j1-s"></div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="../record/pay.php"><span>{_MEMBERs49}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="../auction/list.php"><span>{_MEMBERs50}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="#"><span>{_MEMBERs69}</span></a>
+                        </div>
+                        
+                  </div>
+                
+                
+                
+                
+        
+                
+                
+                	<div class="info-right-title">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/info-img01.png" width="130" height="130" />
+                        <div class="info-right-title-txt">{_MEMBERs5}{TITLE}</div>
+                        <div class="info-right-title-txt2">{_MEMBERs6}{TITLE}{_MEMBERs6-1}</div>
+                    </div>
+                
+                	
+                 
+                    
+                    
+                   <div class="not_license-lin">
+                   <iframe name="gdFrame" id="gdFrame" frameborder="0" width="0" height="0" border="0" src=""></iframe>
+						<form action="" method="post" name="editform" id="editform" target="gdFrame">
+                    	<input type="hidden" name="act" value="edit" />
+                       
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_Username} :</div>
+                            <div class="j2-in199">{USERNAME}</div>
+                        </div>
+                        
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_LastName} :</div>
+                            <input class="j2-in1" name="ud[firstname]" value="{FIRSTNAME}" type="text" size="12" maxlength="20" onKeyPress="return ChkKeyCode('L',event);" />
+                        </div>
+                        
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_FirstName} :</div>
+                            <input class="j2-in1" name="ud[lastname]" value="{LASTNAME}" type="text" size="12" maxlength="20" onKeyPress="return ChkKeyCode('L',event);" />
+                        </div>
+                        
+                        
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_Gender} :</div>
+                            <input class="j2-in2" type="radio" name="ud[gender]" value="M" {GENDER_M} />
+                            <div class="j2-inM" style="color:#FFF;">{_MEMBERs10}</div>
+							<input class="j2-in2" type="radio" name="ud[gender]" value="W" {GENDER_W} />
+                            <div class="j2-inM" style="color:#FFF;">{_MEMBERs11}</div>
+                        </div>
+                        
+                                                
+                        
+                        <div class="info2_2-box">
+                            <input class="za_button btn-form br" value="{_Sure}" type="submit" style="margin-left:5px;"/>
+                    	</div>
+                        
+                        </form>
+
+						<!--div class="j2-right-title">
+                        
+             		</div>
+                    
+                    
+                    
+
+                </div><!--j1-box  end-->
+            </div><!--zhenren end-->
+    	</div>
+    </div>
+
+<script language="javascript">
+function GetCode(){
+	var mb = document.getElementById('mobiletel').value;
+	if(mb == "" || mb == '{MOBILETEL}') alert("{_InputT}「{_InputNewMobile}」");
+	else{
+		$.ajax({
+			type: "post",
+			url: "chgmobile.php",
+			data: { 'mobiletel':mb },
+			dataType: "text",
+			async: false,
+			success: function(v){
+				var temp = v.split(',');
+				if(temp[0] == "111"){ alert(temp[1]);
+				}else if(temp[0] == "110"){
+					alert(temp[1]);
+					$("#scode").css('display','');
+				}else location.replace('../../app/logout.php');
+			}
+		});
+	}
+}
+</script>    
+
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+</form></div></body>
+</html>

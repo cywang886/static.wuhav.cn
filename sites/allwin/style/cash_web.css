@@ -1,0 +1,245 @@
+tr {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+body {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/bk_pic.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #000;
+}
+a { 
+    outline: none; 
+}
+
+.run {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/header_msg-bk.jpg);
+	background-repeat: no-repeat;
+	height: 31px;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.run a:link {
+	text-decoration: none;
+	color: #000;
+}
+.run a:visited {
+	text-decoration: none;
+	color: #000;
+}
+.run a:hover {
+	text-decoration: underline;
+	color: #609;
+}
+.logo_bk {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/header_ph11.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	text-align: center;
+}
+
+.login_bk {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/header_ph12.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.login_text {
+	padding-right: 20px;
+	vertical-align: middle;
+	text-align: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.za_text {
+	background-color: #FFF;
+	border: 1px solid #bb00ff;
+	color: #333;
+	width: 100px;
+	padding-top: 2px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+}
+
+.za_text_1 {
+	background-color: #FFF;
+	border: 1px solid #999;
+	color: #333;
+	height: 22px;
+	width: 150px;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+.foot {
+	color: #999;
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/foot_menu.jpg);
+	background-repeat: repeat-x;
+	text-align: center;
+	height: 40px;
+	background-color: #181818;
+}
+.mem_login {
+	padding-top: 40px;
+	padding-left: 40px;
+	height: 245px;
+	width: 335px;
+}
+.main_line {
+	border: 1px solid #bb6b36;
+	background-color: #5f0102;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.main_tis {
+	line-height: 18px;
+	color: #333;
+	padding-left: 25px;
+}
+.main_dot {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/dot.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	font-size: 15px;
+	font-weight: bold;
+	color: #360;
+	padding-left: 25px;
+	height: 35px;
+	padding-top: 3px;
+}
+.menu_dot {
+	text-align: center;
+	font-size: 15px;
+}
+.menu_bk {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/header_menu-bk.jpg);
+	background-repeat: repeat-x;
+	padding-top: 10px;
+}
+
+
+.game_icon {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/game_bk.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	font-size: 13px;
+	color: #ffe39b;
+}
+
+.game_icon-1 {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/game_bk-1.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	font-size: 13px;
+	color: #ffe39b;
+}
+a:link {
+	color: #e6beff;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #e6beff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FC0;
+	text-decoration: none;
+}
+.sale_tis {
+	line-height: 22px;
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/sale_ph13.jpg);
+	background-repeat: repeat-y;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 15px;
+}
+.sale_bk {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/main_bk.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: 5px;
+}
+.sale_tis a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+.sale_tis a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+.sale_tis a:hover {
+	text-decoration: underline;
+	color: #900;
+}
+.sale_text a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+.sale_text a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+.sale_text a:hover {
+	text-decoration: underline;
+	color: #900;
+}
+
+.text-1 {
+	font-weight: bold;
+	color: #ffe39b;
+}
+.text-2 {
+	color: #7400be;
+}
+.text-3 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #900;
+}
+.text-4 {
+	text-align: right;
+	color: #900;
+}
+.text-5 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+.text-6 {
+	color: #093;
+}
+
+.text-7 {
+	color: #999;
+}
+.text-8 {
+	color: #666;
+}
+.text-9 {
+	color: #900;
+}
+.text-color {
+	color: #FFF;
+}
+.dot_game {
+	background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/dot_game.jpg);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	padding-top: 3px;
+	padding-left: 25px;
+	color: #ffe39b;
+	font-size: 15px;
+}
+.star {
+	FONT-FAMILY: verdana, Helvetica, sans-serif;
+	COLOR: #900;
+	FONT-SIZE: 12px;
+	VERTICAL-ALIGN: -2px;
+	FONT-WEIGHT: bold
+}

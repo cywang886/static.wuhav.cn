@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+
+<!--分頁-->
+<script type="text/javascript">
+	$(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		var $defaultLi = $('.Hbtn1').eq(_showTab).addClass('active');
+		$('.tab_content').eq($defaultLi.index()).siblings().hide();
+		
+		// 當 li 頁籤被點擊時...
+		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		$('.Hbtn1').mouseover(function() {
+			// 找出 li 中的超連結 href(#id)
+			var $this = $(this),
+				_index = $this.index();
+			// 把目前點擊到的 li 頁籤加上 .active
+			// 並把兄弟元素中有 .active 的都移除 class
+			$this.addClass('active').siblings('.active').removeClass('active');
+			// 淡入相對應的內容並隱藏兄弟元素
+			$('.tab_content').eq(_index).stop(false, true).fadeIn().siblings().hide();
+
+			return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+</script>
+<!--分頁 END-->
+<title>{TITLE}</title>
+</head>
+
+<body class="inbody">
+	
+
+<!-- INCLUDE BLOCK : WEB_LOGIN -->
+
+
+<!-- INCLUDE BLOCK : WEB_HEAD -->
+
+
+	<div class="partner-top-box3">
+    	<div class="game-top-box3-con"></div>
+    </div>
+
+	
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_MEMBERs67}</a>
+            </div>
+    
+    		<div class="zhenren">
+            	
+      
+                   
+                <div class="tapbox">
+                    <div class="Hbtn1"><a href="#" >傭金方案</a></div>
+                    <div class="Hbtn1"><a href="#" >條款協議</a></div>
+                    <div class="Hbtn1"><a href="#" >常見問題</a></div>
+                </div>
+        
+                <div><!-- 不可拿掉 -->
+                	
+                    
+                    <div id="tab1" class="tab_content">
+                        <div class="Cmain_title_subject-words-pa">
+                        
+                        	<span class="part_title_span1">【 傭金方案 】<span>合作傭金</span></span>
+                      		<br/><br/>
+                            <span class="part_title_span-star">1.傭金代理運營模式簡介：</span>
+					 		<br/>
+                 			只要您有一定的推廣方式，例如：通過您的論壇、門戶網站、博客、 QQ、微信、電郵或微博發送好友，無任何風險，您只需開發客源，其餘事情全部交給我們公司！<br/>
+							如果您周圍的朋友喜愛博彩遊戲，擁有壹定數量的客戶群和良好的人際關係，您即可加入我們的傭金代理，您就可以獲得高額傭金。
+                            <br/><br/>
+                            
+                            <span class="part_title_span-star">2.公司結算方式：</span>
+					 		<br/>
+                            您的傭金將基於您每月推薦到公司的會員其產生的盈利情況而定，傭金比例由10%-30%不等，詳情可參考下表：<br/>
+                            <div class="part_600"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/img-150521.jpg?v=912" width="401" height="151" /></div>
+                            <div class="clear"></div>
+                            盈利計算方法：本月盈利=本月實際存款-本月實際取款-本月所得返水-本月所得優惠-本月相關費用<br/>
+                            盈利結算時間為：每個月的1號,領取時間延至當月5號<br/>
+							注: 當本月可獲得傭金為負數時，將會帶到下個月繼續累計至可獲得傭金為正數，方可領取
+							<br/><br/>
+                            
+                            <span class="part_title_span-star">3.如何成為傭金代理：</span>
+					 		<br/>
+                            您可以諮詢網站客服，審核資格後便可擁有您的專屬註冊連結與登錄帳戶！
+                            
+
+                        </div>
+                    </div>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                    
+                    
+                    <div id="tab2" class="tab_content">
+                        <div class="Cmain_title_subject-words-pa">
+                        
+                            <span class="part_title_span1">【 條款協議 】<span></span></span>
+                                <br/><br/>
+                                <span class="part_title_span-star">『註冊條款』</span>
+                                <br/>
+                        		1. 為有效防止非誠信合作商濫用{TITLE}所提供的代理優惠制度，公司審查部門將嚴格審核每位元代理商註冊時提供的個人資料（包括姓名，電話等）若經審核發現代理商有任何不良營利企圖，或與其他代理商、會員進行合謀套利等不誠信行為， {TITLE}將關閉該合作代理商之帳戶、扣除帳戶中的本金，並收回該代理商的所有傭金與優惠。<br/><br/>
+								2. 同一IP/同一姓名/同一收款帳號的會員只能是一個合作代理商的下線，代理商本身不能成為自身及其他代理商的下線會員。同一IP/同一姓名/同一收款帳號只能申請一個合作夥伴帳號。
+                                <br/><br/><br/>
+                                <span class="part_title_span-star">『權責條款』</span>
+                                <br/>
+                                1. 合作夥伴的權利和義務。<br/><br/>
+                                2. 合作夥伴需盡其責任及力量積極銷售及推廣{TITLE}以求雙方利潤最大化。合作夥伴必須在不違反法律的前提下，進行正面宣傳、銷售及推廣{TITLE}。由此產生的宣傳、銷售及推廣時所產生的費用需由合作夥伴自行承擔。 <br/><br/>
+                                3. 在推廣時，合作夥伴要保障{TITLE}的利益，任何有損公司聲譽的行為，一經發現立即終止合作關係。 
+                                <br/><br/><br/>
+								<span class="part_title_span-star">『{TITLE}對合作夥伴的權利和義務』</span>
+                                <br/>
+								1. {TITLE}的客服代表將會協助合作夥伴給下線辦理開戶業務並觀察其投注狀況。<br/>
+                                   代理商及會員皆須同意並遵守{TITLE}的會員條例、政策及操作程式。<br/>
+                                   合作夥伴可隨時登入管理後臺瞭解其下線會員的下注狀況與活動概況。
+                                   <br/><br/>
+								2. {TITLE}保留所有對合作代理商或會員之帳戶加以拒絕或凍結的權利。
+                                <br/><br/>
+                                3. 在某些情況下經過認真審查{TITLE}保留單方面修改合作協定上的任何條款的權利，{TITLE}會以電郵或在網站刊登修改情況告知合作夥伴。修改內容可能包括：傭金範圍、付款程式、及其它條例。如合作夥伴對於修改表示反對，合作夥伴可終止合約。修改後合作夥伴不作任何異議，便視作預設接受和對新協議表示認可。
+								<br/><br/><br/>
+                                
+                                <span class="part_title_span-star">『協議期限和終止』</span>
+                                <br/>
+                                1. 合作協定從合作夥伴申請成功後開始執行。合作夥伴在任何時間均可終止此合約，但必須以書面形式提前7日內通知對方有關合約的終止，合作夥伴可將通知以電郵形式寄致：JO888.net@gmail.com 如合作夥伴違反合作協定，{TITLE}有權在沒有通知的情況下終止合約。
+								<br/><br/>
+                                2. 在合約執行期間，合作夥伴同意不會透露相關{TITLE}的合作機密資料于第三者，除得到{TITLE}書面同意及可利用這些機密檔作為日後必要時作合約之跟進之用。<br/>
+                                 合作夥伴有義務在合約終止後仍執行機密檔的保密。  
+                                 <br/><br/>
+								3. 如果合作夥伴在任何情形下，通過大批量發送垃圾電子郵件宣傳{TITLE}的服務，我們將無條件立即終止此協定，並將合作夥伴帳戶重新審核及凍結其款項。合作商不可以提出任何與我們有關的要求或聲明、或給出任何承諾，同時您也沒有任何權力將我們約束在任何義務之下。  
+								<br/><br/>
+								4. {TITLE}及合作夥伴是獨立的立契者，這合約並不形成合股、合併、代理人、特許經營、營業代表或顧員關係。有關於合作專案，我們不發表任何關於我們網站運作將會無干擾和無錯誤的聲明，因而即便一旦出現問題我們也將對此不負任何責任。成為和記娛樂的合作夥伴，代表您閱讀了此協定並已經自主評估了參與的意願，同意所有的規則與條款，在任何情況下都同意被此協定的規則和條款所約束。 
+								
+                        </div>
+                    </div>
+                    
+                    
+                    
+                   <div id="tab3" class="tab_content">
+                        <div class="Cmain_title_subject-words-pa">
+                        
+                            <span class="part_title_span1">【 常見問題 】<span>加盟合作常見問題</span></span>
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">1. 為何選擇{TITLE}？</span>
+                        		<br/>
+                        		網路遊戲業是當今發展迅速的一大產業，市場發展前景無量，和記娛樂發展規模在不斷壯大，客戶系統及合作夥伴系統已經趨於完善，我們根據市場需求，發揮技術優勢，已成功地搭建了一個專業化的大型綜合性互動遊戲平臺。{TITLE}在行業內已經具備一定的知名度和大批忠誠用戶，具有絕對的品牌優勢。和記娛樂設定的合作夥伴傭金方案，讓合作夥伴無任何風險，只要會員有投注就有傭金領取，不用與{TITLE}共同承擔風險。立即加入我們吧，您只需要充分利用您的人脈和網路資源，即可獲得豐厚的傭金回報。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">2. 如何成為合作夥伴？</span>
+                        		<br/>
+                                點擊{TITLE}客服平臺詢問且告知，審核通過後，您就正式成為{TITLE}的合作夥伴，可以開始進行推廣發展下線。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">3. 如何推廣？</span>
+                        		<br/>
+                                每位合作夥伴都有自己獨立的推廣連結和管理後臺，您可以在後臺直接開出真錢遊戲帳號提供給您的朋友，他們將直接成為您的下線會員。您也可以通過聊天室聊天、論壇發帖、博客留言以及網站上掛煉接等多種網路推廣方式來發展您的下線會員。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">4. 如何在其他網站發帖，並加上煉接？</span>
+                        		<br/>
+                                {TITLE}已經為您準備好了標準的發貼文章，您可以詢問網站上的代理部門QQ索取發帖文章，發表在論壇時加上煉接即可。<br/>
+ 								只有通過您的代理連結進入{TITLE}並成功註冊的客戶，才是您的客戶。可通過合作夥伴管理後臺，查看每天通過連結註冊的客戶的贏利情況。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">5. {TITLE}是如何記錄從我網站進入的訪客？</span>
+                        		<br/>
+                                當訪客通過您的網站或者發貼文章點選連結進入到本站，系統將會通過識別字進行識別。當用戶註冊成功，他們將永遠是您的客戶。您可通過登入到合作夥伴頁面，查看具體的情況（點擊次數、註冊使用者情況、輸贏情況）。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">6. 如何查看我的會員投注記錄及盈利情況？</span>
+                        		<br/>
+                                如果您需要查看您介紹會員的投注情況，需要登入到合作夥伴管理後臺，選擇您所需資料的時間範圍，便可查詢下線客戶的有效投注額和您的傭金狀況。
+                                <br/><br/>
+                                <span class="part_title_span-star-Q">7. 如何收取傭金？</span>
+                        		<br/>
+                                如果您推薦的有效客戶超過5個並且合作夥伴利潤超過人民幣500元，您可以透過網站上客服平臺詢問確定代理傭金。您可以選擇多種款項支取方式，也可以把款項轉到您的真錢帳戶中，但要求真錢帳號的姓名與合作夥伴的註冊姓名一致。傭金每月支付一次，5日即可申請支付代理傭金。
+                                
+                        </div>
+                   </div>
+        
+        
+                </div><!-- 不可拿掉 -->   
+                
+            </div><!--zhenren end-->
+    
+
+    	</div>
+    </div>
+
+    
+    
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+   
+    
+</body>
+</html>

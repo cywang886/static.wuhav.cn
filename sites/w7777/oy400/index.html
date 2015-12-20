@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script>
+var port = 8098;
+var site = [
+		//"http://113.107.249.215",
+		//"http://122.13.194.215",
+		"http://2.w7777.net",
+		"http://3.w7777.net",
+		"http://27.54.254.54",
+		"http://5.w7777.net",
+		"http://6a.w7777.net",
+		"http://6b.w7777.net",
+		"http://7a.w7777.net",
+		"http://7b.w7777.net",
+		"http://8.w7777.net",
+];
+var faster_ms = 5000;
+var faster_site = 0;
+var tim = 1;
+setInterval("tim++", 100);
+
+function open_window(url,tag,w,h,f){
+	var str = "";
+	if(tag == "") tag = "win";
+	if(f == 1) str = ",fullscreen=1";
+	var son_win = window.open(url, tag, 'height='+h+',width='+w+',top=0,left=0,toolbar=0,menubar=0,directories=0,scrollbars=1,resizable=1,location=0,status=0'+str,!0);
+	return son_win;
+}
+
+function mopen( url ){
+	var uid = urlget("uid");
+	var ss 	= urlget("ss");
+	if ( typeof(uid) !="undefined") {
+		url = url +'?uid='+uid;
+	}
+	if ( typeof(ss) !="undefined") {
+		url = url +'&ss='+ss;
+	}
+	open_window(url,'game',1024,768,1);
+	//var myWindow = window.open(url, "_blank");
+}
+function autourls(url,obj,site_count)
+{
+	var cc = tim*10;
+	var time = tim*10+'ms';
+	if ( cc < faster_ms ) { // 速度最快的
+		faster_ms = cc;
+		faster_site = site_count - 1;
+	}
+	
+	$('#'+url).val( time );
+	if ( cc >=700 ) {
+		$('#'+url).val( ' 暂时离线' );
+	}
+}
+function urlget(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}
+function gotofaster(){ //自動到最快的url
+	mopen( site[faster_site]+':'+port );
+}
+window.onload = function() {
+	var count = 1;
+	var place = document.getElementById("place");
+	for( var i in site ){
+		var t = document.createElement("div");
+		var id = "progress"+ count;
+		t.setAttribute("id", id );
+		t.setAttribute("class", "con-box1-s" );
+		var txt = '<input class="coninput1" name="" type="text" value="主站' + count+'">'
+			+ '<span>&gt;&gt;&gt;</span> <img src="'+site[i]+':'+port
+			+'" width=1 height=1 onerror="autourls(\'res'+count+'\',this,'+count+');" style=\'display:none\'>'
+			+ '<input class="coninput2" name="" type="text" id="res'+count+'">'
+			+ '<span>&gt;&gt;&gt;</span><input class="btn1" type="button" value="打开链结" onclick="mopen(\''+site[i]+':'+port+'\')">';
+		t.innerHTML = txt;
+		place.appendChild(t);
+		count++;
+	}
+	var tem_uid = urlget("uid");
+	if ( typeof(tem_uid) =="undefined") {
+	//	window.location.replace('http://oo88.net');
+	} else {
+		var _timer = setInterval("gotofaster()",3000);
+	}
+};
+</script>
+<title>测速最快游戏线路</title>
+</head>
+
+<body>
+
+
+<div class="in-big-box2">
+
+	<div class="x-line">
+    	<div>测速最快游戏线路</div>
+    </div>
+    
+	<div class="in-big-box-con2">
+    
+    	<div class="con-box1">
+        	
+            <div class="con-box1-s">
+            	<div class="txt3">通用网址 温馨提示：反应时间越小，网站速度越快，找到最小ms数值的网址并打开链结</div>
+            </div>
+        
+        	<div id="place"></div>    
+                     
+        	<div class="btn2"><a href="javascript:location.reload();" class="SxAn">点击重新检测</a></div>
+            
+        </div>
+    
+    </div>
+    
+    <div class="footer-box">
+    	<div class="footer-box-con">
+
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

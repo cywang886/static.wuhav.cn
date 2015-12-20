@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITLE}</title>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+</head>
+
+<body topmargin="0" leftmargin="0">
+<!-- INCLUDE BLOCK : WEB_HEAD -->
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr>
+    <td valign="top" class="login_tis">
+    <!-- INCLUDE BLOCK : WEB_LOGIN -->
+    </td>
+    <td width="770" valign="top"><br />
+      <table border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="http://static.plm168.com/images/zh-tw/pic_social.jpg" width="300" height="55" /></td>
+          <td><img src="http://static.plm168.com/images/pic.jpg" width="440" height="55" /></td>
+        </tr>
+      </table>
+      <p></p>
+      <p align="center" class="text-3">請先建立您的基本資料。</p>
+      <table width="550" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="1%"><img src="http://static.plm168.com/images/main_border1.jpg" width="18" height="18" /></td>
+          <td width="98%" background="http://static.plm168.com/images/main_border2.jpg" style="background-repeat:repeat-x">&nbsp;</td>
+          <td width="1%"><img src="http://static.plm168.com/images/main_border3.jpg" width="18" height="18" /></td>
+        </tr>
+        <tr>
+          <td background="http://static.plm168.com/images/main_border4.jpg" style="background-repeat:repeat-y">&nbsp;</td>
+          <td bgcolor="#250038"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="main_table_line">
+            <form action="" method="post" name="form1" id="form1">
+              <input type="hidden" name="act" value="new">
+              <input type="hidden" name="ud[username]" value="{USERNAME}">
+              <input type="hidden" name="ud[email]" value="{EMAIL}">
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">{_FirstName}</td>
+                <td><input name="ud[firstname]" value="{FIRSTNAME}" type="text" size="12" maxlength="20" onKeyPress="return ChkKeyCode('L',event);">{_*}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">{_LastName}</td>
+                <td><input name="ud[lastname]" value="{LASTNAME}" type="text" size="12" maxlength="20" onKeyPress="return ChkKeyCode('L',event);">{_*}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">{_Gender}</td>
+                <td><input type="radio" name="ud[gender]" value="M" {GENDER_M}>{_Gender_M} &nbsp; &nbsp; <input type="radio" name="ud[gender]" value="W" {GENDER_W}>{_Gender_W}{_*}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">{_MobileTel}</td>
+                <td><input id="mobiletel" name="ud[mobiletel]" type="text" value="{MOBILETEL}" size="12" onKeyPress="return ChkKeyCode('P',event);"><input type="button" value="{_SendPhoneCode}" onclick="GetCode();">{_*}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">{_SendCode}</td>
+                <td><input name="ud[verify]" type="text" value="" onkeypress="return ChkKeyCode('+I',event);" />{_*}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td align="right" class="main_table_tit_1">說明</td>
+                <td><font color="FF0000">輸入手機後請按「{_SendPhoneCode}」，您將會收到一組驗証碼，若驗証不過，將無法開通您的帳號，所以請務必正確輸入您的手機號碼，謝謝!!</font></td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td colspan="2" align="center"><input type="submit" name="button" id="button" value="{_Sure}" /></td>
+              </tr>
+            </form>
+          </table></td>
+          <td background="http://static.plm168.com/images/main_border5.jpg" style="background-repeat:repeat-y">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><img src="http://static.plm168.com/images/main_border6.jpg" width="18" height="18" /></td>
+          <td background="http://static.plm168.com/images/main_border7.jpg" style="background-repeat:repeat-x">&nbsp;</td>
+          <td><img src="http://static.plm168.com/images/main_border8.jpg" width="18" height="18" /></td>
+        </tr>
+    </table>
+    <br /></td>
+  </tr>
+</table>
+<iframe id="SmsFrame" src="" width="0" height="0" border="0" frameborder="0"></iframe>
+
+<script language="javascript">
+function GetCode(){
+	var fm = document.getElementById('form1');
+	if(fm.mobiletel.value == "") alert("{_InputT}「{_InputNewMobile}」");
+	else $("#SmsFrame").attr("src", "smscode.php?mobiletel="+fm.mobiletel.value);
+}
+</script>
+</body>
+</html>

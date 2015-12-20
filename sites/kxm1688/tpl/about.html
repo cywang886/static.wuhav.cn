@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+
+
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--分頁-->
+<script type="text/javascript">
+	$(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		var $defaultLi = $('.Hbtn1').eq(_showTab).addClass('active');
+		$('.tab_content').eq($defaultLi.index()).siblings().hide();
+		
+		// 當 li 頁籤被點擊時...
+		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		$('.Hbtn1').mouseover(function() {
+			// 找出 li 中的超連結 href(#id)
+			var $this = $(this),
+				_index = $this.index();
+			// 把目前點擊到的 li 頁籤加上 .active
+			// 並把兄弟元素中有 .active 的都移除 class
+			$this.addClass('active').siblings('.active').removeClass('active');
+			// 淡入相對應的內容並隱藏兄弟元素
+			$('.tab_content').eq(_index).stop(false, true).fadeIn().siblings().hide();
+
+			return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+</script>
+<!--分頁 END-->
+
+<title>{TITLE}</title>
+</head>
+
+<body class="inbody">
+	
+
+
+<!-- INCLUDE BLOCK : WEB_HEAD -->	
+
+
+	<div class="about1-top-box3">
+    	<div class="game-top-box3-con"></div>
+    </div>
+
+	
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="../../app/about.php">{_MEMBERs24}</a>
+            </div>
+    
+    		<div class="zhenren">
+            
+            
+            	<div class="tapbox">
+                    <div class="Hbtn1"><a href="#" >{_MEMBERs24}</a></div>
+                    <div class="Hbtn1"><a href="#" >实体赌场介绍</a></div>
+                </div>
+        
+                <div><!-- 不可拿掉 -->
+            	
+                   
+                	<div id="tab1" class="tab_content">
+                        <div class="Cmain_title_subject-words-pa">
+                        
+                            <div class="main_title_subject-box">
+                                <div class="main_title_subject-logo-6"></div>
+                                <div class="main_title_subject-words">{_MEMBERs25} {TITLE} -</div>
+                            </div>
+                        
+                            <div class="Cmain_title_subject-box">
+                                <!--<div class="Cmain_title_subject-logo-G"></div>-->
+                                <div class="Cmain_title_subject-words">
+                                    {TITLE}{_MEMBERs26-1}
+                                    <br/><br/>
+                                    {_MEMBERs27-1} 
+                                    <br/><br/>
+                                    {_MEMBERs28-1}
+                                    <br/><br/>
+                                    {_MEMBERs29-1}
+                                    <br/><br/>
+                                    {_MEMBERs30-1}
+                                    <br/><br/>
+                                    {_MEMBERs30-2}
+                                    <br/><br/>
+                                    {_MEMBERs30-4}
+                                    <br/><br/>
+                                    {_MEMBERs30-5}
+                                </div>
+                            </div>
+                            
+						</div>
+                    </div>
+ 
+                   
+                   
+                    
+                
+                <div id="tab2" class="tab_content">
+                	<div class="Cmain_title_subject-words-pa">
+                    
+                    	<div class="main_title_subject-box">
+                            <div class="main_title_subject-logo"></div>
+                            <div class="main_title_subject-words">凯旋门厅</div>
+                        </div>
+                        
+                        <!-- 輪播開始-->
+                
+                        <div id="abgne-block-20120110-3">
+                            <div class="showbox-3">
+                                <a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k01.jpg" width="300" height="225" /></a>
+                            </div>
+                
+                            <ul class="link" style="width:300px; height:auto; float:right;">
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k01.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k02.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k03.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k04.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k05.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k06.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k07.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k08.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k09.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k10.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k11.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k12.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k13.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k14.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k15.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/k/k16.jpg" title="" /></a></li>
+                            </ul>
+                        </div>
+                
+                      <!-- 輪播結束 --> 
+                    
+                    <!-- 輪播開始
+                
+                        <div id="abgne-block-20120110-2">
+                            <div class="showbox-2">
+                                <a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/53.jpg" width="300" height="225" /></a>
+                            </div>
+                
+                            <ul class="link" style="width:300px; height:auto; float:right;">
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/53.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/54.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/55.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/56.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/57.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/58.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/59.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/60.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/61.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/62.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/63.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/64.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/65.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/66.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/67.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/68.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/69.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/70.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/71.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/72.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/73.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/74.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/75.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/all/76.jpg" title="" /></a></li>
+                            </ul>
+                        </div>
+                
+                      
+                    
+                    
+                    
+                    
+                        <div class="main_title_subject-box">
+                            <div class="main_title_subject-logo"></div>
+                            <div class="main_title_subject-words">{_MEMBERs31} GClub</div>
+                        </div>
+                    
+                        <div class="Cmain_title_subject-box">
+                            <div class="Cmain_title_subject-logo-G"></div>
+                            <div class="Cmain_title_subject-words">
+                                {_MEMBERs32}
+                                <br/>
+                                <b>Gclub {_MEMBERs33}</b><br/>
+                                    {_MEMBERs34}
+                            </div>
+                        </div>
+
+						
+                
+                        <div id="abgne-block-20120110">
+                            <div class="showbox">
+                                <a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/01.jpg" width="300" height="225" /></a>
+                            </div>
+                
+                            <ul class="link" style="width:300px; height:auto; float:right;">
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/01.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/02.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/03.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/04.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/05.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/06.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/07.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/08.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/09.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/10.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/11.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/12.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/13.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/14.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/15.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/16.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/17.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/18.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/19.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/g/20.jpg" title="" /></a></li>
+                            </ul>
+                        </div>
+                
+                      
+            
+            
+            
+            
+            
+                        <div class="main_title_subject-box">
+                            <div class="main_title_subject-logo"></div>
+                            <div class="main_title_subject-words" style="font-weight:100;">POIPET RESORT</div>
+                        </div>
+                    
+                        <div class="Cmain_title_subject-box">
+                            <div class="Cmain_title_subject-logo"></div>
+                            <div class="Cmain_title_subject-words">
+                               {_MEMBERs35}
+                            </div>
+                        </div>
+                
+                        
+                
+                        <div id="abgne-block-20120110-1">
+                            <div class="showbox-1">
+                                <a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/21.jpg" width="300" height="225" /></a>
+                            </div>
+                
+                            <ul class="link" style="width:300px; height:auto; float:right;">
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/21.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/22.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/23.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/24.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/25.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/26.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/27.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/28.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/29.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/30.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/31.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/32.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/33.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/34.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/35.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/36.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/37.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/38.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/39.jpg" title="" /></a></li>
+                                <li><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/about/P/40.jpg" title="" /></a></li>
+                            </ul>
+                        </div>
+                
+                       輪播結束 --> 
+                      
+                   </div>
+                    </div>   
+                
+                
+                
+				</div><!-- 不可拿掉 -->
+            </div><!--zhenren end-->
+    
+    
+    
+    
+    	</div>
+    </div>
+
+
+    
+    
+  
+    
+    
+
+    
+    <!-- INCLUDE BLOCK : WEB_FOOTER -->
+    
+
+    
+    
+<!-- INCLUDE BLOCK : WEB_LOGIN -->
+    
+    
+    
+    
+<!-- 賭場介紹輪播 -->
+<script type="text/javascript">
+	$(function(){
+		// 先取得相關的區塊及預設要先顯示那一個
+		var $block = $('#abgne-block-20120110'),
+			$link = $block.find('.link li'),
+			$showBox = $block.find('.showbox'),
+			_default = 0,
+			timer, speed = 1000;
+
+		// 幫 $link a 加入一個 span.triangle, 用來產生三角形用
+		$link.find('a').append('<span class="triangle"></span>');
+
+		// 當滑鼠移到 $link 上時
+		$link.mouseover(function(){
+			var $this = $(this);
+
+			// 修改 $showBox 中的超連結及圖片
+			$showBox.html('<a href="'+$this.find('a').attr('href')+'"><img src="'+$this.find('img').attr('src')+'" /></a>');
+			// 幫被滑鼠移上去的 li 加上 .on
+			$this.addClass('on').siblings('.on').removeClass('on');
+		}).click(function(){
+			// 如果是點擊到 $link 時則取消連結功能
+			return false;
+		}).eq(_default).mouseover();
+
+		var timer, speed = 2000
+		$block.hover(function(){
+			// 當滑鼠移入時, 停止計時器
+			clearTimeout(timer);
+		}, function(){
+			// 當滑鼠移出時, 啟動計時器
+			timer = setTimeout(auto, speed);
+		});
+
+		// 用來自動輪播使用
+		function auto(){
+			var _index = $link.filter('.on').index();
+			_index = (_index + 1) % $link.length;
+
+			$link.eq(_index).mouseover();
+			timer = setTimeout(auto, speed);
+		}
+
+		// 啟動計時器
+		timer = setTimeout(auto, speed);
+	});
+</script>
+
+
+<script type="text/javascript">
+	$(function(){
+		// 先取得相關的區塊及預設要先顯示那一個
+		var $block = $('#abgne-block-20120110-1'),
+			$link = $block.find('.link li'),
+			$showBox = $block.find('.showbox-1'),
+			_default = 0,
+			timer, speed = 1000;
+
+		// 幫 $link a 加入一個 span.triangle, 用來產生三角形用
+		$link.find('a').append('<span class="triangle"></span>');
+
+		// 當滑鼠移到 $link 上時
+		$link.mouseover(function(){
+			var $this = $(this);
+
+			// 修改 $showBox 中的超連結及圖片
+			$showBox.html('<a href="'+$this.find('a').attr('href')+'"><img src="'+$this.find('img').attr('src')+'" /></a>');
+			// 幫被滑鼠移上去的 li 加上 .on
+			$this.addClass('on').siblings('.on').removeClass('on');
+		}).click(function(){
+			// 如果是點擊到 $link 時則取消連結功能
+			return false;
+		}).eq(_default).mouseover();
+
+		var timer, speed = 2000
+		$block.hover(function(){
+			// 當滑鼠移入時, 停止計時器
+			clearTimeout(timer);
+		}, function(){
+			// 當滑鼠移出時, 啟動計時器
+			timer = setTimeout(auto, speed);
+		});
+
+		// 用來自動輪播使用
+		function auto(){
+			var _index = $link.filter('.on').index();
+			_index = (_index + 1) % $link.length;
+
+			$link.eq(_index).mouseover();
+			timer = setTimeout(auto, speed);
+		}
+
+		// 啟動計時器
+		timer = setTimeout(auto, speed);
+	});
+</script>
+<!-- 賭場介紹輪播 -->
+
+
+<script type="text/javascript">
+	$(function(){
+		// 先取得相關的區塊及預設要先顯示那一個
+		var $block = $('#abgne-block-20120110-2'),
+			$link = $block.find('.link li'),
+			$showBox = $block.find('.showbox-2'),
+			_default = 0,
+			timer, speed = 1000;
+
+		// 幫 $link a 加入一個 span.triangle, 用來產生三角形用
+		$link.find('a').append('<span class="triangle"></span>');
+
+		// 當滑鼠移到 $link 上時
+		$link.mouseover(function(){
+			var $this = $(this);
+
+			// 修改 $showBox 中的超連結及圖片
+			$showBox.html('<a href="'+$this.find('a').attr('href')+'"><img src="'+$this.find('img').attr('src')+'" /></a>');
+			// 幫被滑鼠移上去的 li 加上 .on
+			$this.addClass('on').siblings('.on').removeClass('on');
+		}).click(function(){
+			// 如果是點擊到 $link 時則取消連結功能
+			return false;
+		}).eq(_default).mouseover();
+
+		var timer, speed = 2000
+		$block.hover(function(){
+			// 當滑鼠移入時, 停止計時器
+			clearTimeout(timer);
+		}, function(){
+			// 當滑鼠移出時, 啟動計時器
+			timer = setTimeout(auto, speed);
+		});
+
+		// 用來自動輪播使用
+		function auto(){
+			var _index = $link.filter('.on').index();
+			_index = (_index + 1) % $link.length;
+
+			$link.eq(_index).mouseover();
+			timer = setTimeout(auto, speed);
+		}
+
+		// 啟動計時器
+		timer = setTimeout(auto, speed);
+	});
+</script>
+<!-- 賭場介紹輪播 -->
+
+
+<script type="text/javascript">
+	$(function(){
+		// 先取得相關的區塊及預設要先顯示那一個
+		var $block = $('#abgne-block-20120110-3'),
+			$link = $block.find('.link li'),
+			$showBox = $block.find('.showbox-3'),
+			_default = 0,
+			timer, speed = 1000;
+
+		// 幫 $link a 加入一個 span.triangle, 用來產生三角形用
+		$link.find('a').append('<span class="triangle"></span>');
+
+		// 當滑鼠移到 $link 上時
+		$link.mouseover(function(){
+			var $this = $(this);
+
+			// 修改 $showBox 中的超連結及圖片
+			$showBox.html('<a href="'+$this.find('a').attr('href')+'"><img src="'+$this.find('img').attr('src')+'" /></a>');
+			// 幫被滑鼠移上去的 li 加上 .on
+			$this.addClass('on').siblings('.on').removeClass('on');
+		}).click(function(){
+			// 如果是點擊到 $link 時則取消連結功能
+			return false;
+		}).eq(_default).mouseover();
+
+		var timer, speed = 2000
+		$block.hover(function(){
+			// 當滑鼠移入時, 停止計時器
+			clearTimeout(timer);
+		}, function(){
+			// 當滑鼠移出時, 啟動計時器
+			timer = setTimeout(auto, speed);
+		});
+
+		// 用來自動輪播使用
+		function auto(){
+			var _index = $link.filter('.on').index();
+			_index = (_index + 1) % $link.length;
+
+			$link.eq(_index).mouseover();
+			timer = setTimeout(auto, speed);
+		}
+
+		// 啟動計時器
+		timer = setTimeout(auto, speed);
+	});
+</script>
+<!-- 賭場介紹輪播 -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

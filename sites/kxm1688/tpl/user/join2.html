@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script language="javascript">
+$(function(){
+    // 重刷驗證碼
+    $("#verifycode").click(function(){
+        var verify_code = "verification.php?v="+ Math.random();
+        $("#verifycode").attr("src", verify_code);
+    });
+});
+function chkUsername(username){
+	if(username.length < 6 || username.length > 12){ alert("{_Eor_UserName6}"); return false; }
+	else{ return true; }
+}
+function chkPwd1(pwd){
+	if(pwd.length < 6 || pwd.length > 12){ alert("{_Eor_Pwd6}"); return false; }
+	else{ return true; }
+}
+function chkPwd2(pwd, chkpwd){
+	if(pwd != chkpwd){ alert("{_Eor_Pwd2}"); return false; }
+	else{ return true; }
+}
+</script>
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+<!-- INCLUDE BLOCK : WEB_HEAD -->	
+<div class="join1-top-box3">
+	<div class="join1-top-box3-con"></div>
+</div>
+<!------------------中間開始------------------------>
+<div class="game-md-box">
+	<div class="game-md-box-con">
+    	<div class="position">
+        	<span>{_Record_1}：</span>
+            <a href="#">{_NewMem}</a>
+        </div>
+		<div class="zhenren">
+        	<div class="j1-box">
+            	<div class="j1-box-left">
+                	<div class="j1-box-left-title">{_MEMBERs14}<span>{_MEMBERs15}</span></div>
+                    <div class="j1-left-btn2">
+                    	<div>01</div>
+                        <span>{_MEMBERs16}</span>
+                    </div>
+                    <div class="j1-left-btn1">
+                    	<div>02</div>
+                        <span>{_MEMBERs17}</span>
+                    </div>
+                    <div class="j1-s"></div>           
+                    <div class="j1-left-btn2">
+                    	<div>03</div>
+                        <span>{_MEMBERs18}</span>
+                    </div>
+                    <div class="j1-left-btn2">
+                    	<div>04</div>
+                        <span>{_MEMBERs19}</span>
+                    </div>
+                </div>
+            	<div class="j1-right-title">
+                	<div class="j1-right-titlespan2">{_MEMBERs23}{TITLE}</div>
+                	<div class="j1-right-titlespan">{_MEMBERs21}<span>{_*}</span>{_MEMBERs22}</div>
+                </div>                       
+                
+                <form name="newform" action="join3.php" method="post" target="gdFrame">
+                <input type="hidden" name="act" value="add" />
+                <div class="join2_license">
+                    <div class="join2_1-box">
+                   		<div class="join2_1-title"><span>{_*}</span>{_Username}:</div>
+                    	<input class="j2-in1" name="ud[username]" value="" type="text" size="12" maxlength="12" onkeypress="return ChkKeyCode('L',event);" onblur="chkUsername(this.value);" />
+                  		<div class="join2_1-boxcor">{_UsernameNotes}</div>
+                    </div>
+                    
+                    <div class="join2_1-box">
+                   		<div class="join2_1-title"><span>{_*}</span>{_Passwd}:</div>
+                    	<input class="j2-in1" name="ud[pwd]" id="pwd" value="" type="password" size="12" maxlength="12" onkeypress="return ChkKeyCode('L',event);" onblur="chkPwd1(this.value);" />
+                  		<div class="join2_1-boxcor">{_PwdNotes}</div>
+                    </div>
+                    
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title"><span>{_*}</span>{_ChkPwd} :</div>
+                    	<input class="j2-in1" name="ud[chkpwd]" value="" type="password" size="12" maxlength="12" onkeypress="return ChkKeyCode('L',event);" onblur="chkPwd2($('#pwd').val(), this.value);" />
+                    </div>
+                    
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title"><span>{_*}</span>{_LastName} :</div>
+                    	<input class="j2-in1" name="ud[lastname]" value="" type="text" size="15" maxlength="20" onkeypress="return ChkKeyCode('L',event);" />
+                    </div>
+                    
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title"><span>{_*}</span>{_FirstName} :</div>
+                    	<input class="j2-in1" name="ud[firstname]" value="" type="text" size="15" maxlength="20" onkeypress="return ChkKeyCode('L',event);" />
+                    </div>                    
+                    
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title">{_Gender} :</div>
+                    	<input class="j2-in2" type="radio" name="ud[gender]" value="M" checked="" />
+                        <div class="j2-inM">{_Gender_M}</div>
+			            <input class="j2-in2" type="radio" name="ud[gender]" value="W" />
+            	        <div class="j2-inM">{_Gender_W}</div>
+                    </div>
+                    
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title">{_UpId} :</div>
+                   		<span>{AGACC}</span>
+                    </div>
+        	 	
+                    <div class="join2_1-box">
+                  		<div class="join2_1-title"><span>{_*}</span>{_Verification} :</div>
+                   		<img id="verifycode" src="verification.php" align="absmiddle" /><input class="j2-in1" type="text" name="ud[verification]" value="" size="4" maxlength="4" onKeyPress="return ChkKeyCode('+I',event);" />
+                    </div>
+      
+                    <div class="join2_1-box">
+                        <div class="join2_1-title"><span>{_*}</span>{_MobileTel} :</div>
+                    	<input class="j2-in1" type="text" name="ud[mobiletel]" value="" size="12" maxlength="12" onkeypress="return ChkKeyCode('P',event);" />
+                   		<div class="join2_1-boxcor">{_SignUpMemo}</div>
+                    </div>
+            		<div class="j2-right-title">&nbsp;</div>
+                    
+                    <div class="join2_2-box-01">
+                    	<input class="za_button btn-form" value="{_Sure}" type="submit" />
+              			<input class="za_button btn-form br" value="{_Reset}" type="reset" style="margin-left:5px;" />
+                    </div>
+                    
+                </div>
+                </form>  
+            </div><!--j1-box  end-->
+        </div><!--zhenren end-->
+	</div>
+</div>
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+<iframe name="gdFrame" id="gdFrame" frameborder="0" width="0" height="0" border="0" src=""></iframe> 
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<link href="../../sites/{SITE}/style/calendar.css" rel="stylesheet" type="text/css" />
+<script src="../../js/calendar.js" type="text/javascript"></script>
+<script language="javascript">
+function getD(s,e){
+	var obj = document.getElementById("sForm");
+	obj.date_s.value = s;
+	obj.date_e.value = e;
+	obj.submit();
+}
+</script>
+<title>{TITLE}</title>
+</head>
+
+<body class="inbody">
+	
+
+	<!-- INCLUDE BLOCK : WEB_HEAD -->
+
+	<div class="not-top-box9">
+    	<div class="not-top-box3-con"></div>
+    </div>
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_MEMBERs4}</a>
+            </div>
+    
+    		<div class="zhenren">
+            
+            	<div class="j1-box">
+            
+            		<div class="j1-box-left-82">
+                    	<div class="j1-box-left-title-82">{_MEMBERs4}</div>
+                  	</div>
+            
+					<div class="li9-btn-box">
+                    	<div class="li9-btn-boxinput"><a href="modify.php">{_MEMBERs48-1}</a></div>
+                        <div class="li9-btn-boxinput2">{_MEMBERs4}</div>
+                    </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      <div class="not_license">
+          
+            <form name="sForm" id="sForm" method="get">
+            
+            <div class="search_tool" style="margin:10px 0px 0px 120px;">
+            	<label>{_Date} :&nbsp;</label>
+				<input type="text" name="date_s" id="sDate_S" size="10" maxlength="10" value="{DATE_S}" class="za_text" onKeyPress="return ChkKeyCode('I',event);" />
+				<span style="float:left; margin:7px 3px 0px 3px;">
+					<script language="JavaScript">new tcal({'controlname':'sDate_S', 'langx':'{LANGX}', 'imgpath':'http://{IMG_URL}/sites/{SITE}/images/cal/'});</script>
+            	</span>
+            	<span class="date-icon"></span>
+           		<label>&nbsp;~&nbsp;</label>
+				<input type="text" name="date_e" id="SDate_E" size="10" maxlength="10" value="{DATE_E}" class="za_text" onKeyPress="return ChkKeyCode('I',event);" />
+				<span style="float:left; margin:7px 3px 0px 3px;">
+					<script language="JavaScript">new tcal({'controlname':'SDate_E', 'langx':'{LANGX}', 'imgpath':'http://{IMG_URL}/sites/{SITE}/images/cal/'});</script>
+             	</span>
+           		<span class="date-icon"></span> 
+        		<input type="submit" value="{_Search}" class="za_button" style="margin-left:81px;" />  
+                <label>{_Di} </label>
+    				<select class="sea-down1" name="page" id="sPage" onchange="this.form.submit();">{PAGE_OPTION}</select>    
+                    <label>/</label>
+                    <label> {PAGE_TOTAL} {_Page} &nbsp; </label>		
+					<a class="btn-paging" href="javascript:void(0);" onclick="getD('{WEEK_L_S}','{WEEK_L_E}');"><font color="#C00000"><b>{_LastWeek}</b></font></a>
+              		<a class="btn-paging" href="javascript:void(0);" onclick="getD('{WEEK_S}','{WEEK_E}');"><font color="#C00000"><b>{_ThisWeek}</b></font></a>
+			</div>
+            </form>
+            
+            <div class="search_tool-con" style="margin:10px 0px 3px 120px; height:26px; float:left;">
+            	<div class="se-id" style=" width:168px; float:left; border-right:1px #FFFFFF solid; height:26px;">{_Date}</div>
+                <!--<div class="se-mon" style=" width:78px; float:left; border-right:1px #FFFFFF solid; height:26px;">{_BankCode}</div>-->
+                <div class="se-mon" style=" width:144px; float:left; border-right:1px #FFFFFF solid; height:26px;">{_AccountCode}</div>
+                <div class="se-potin" style="width:108px; float:left; border-right:1px #FFFFFF solid; height:26px;">{_Point}</div>
+                <div class="se-potin" style="width:166px; float:left; height:26px; border-right:1px solid #FFFFFF;">{_Status}</div>	
+        	</div>
+                        
+                        
+            
+               
+              
+              <!-- START BLOCK : Data -->
+              <div class="search_tool-con-2" style="margin:1px 0px 0px 120px; height:26px; float:left;">
+                    <div class="se-id-c" style=" width:168px; float:left; border-right:1px #FFFFFF solid; height:26px;">{ADDDATE}</div>
+                    <!--<div class="se-mon-c" style=" width:78px; float:left; border-right:1px #FFFFFF solid; height:26px;">{BANKCODE}</div>-->
+                    <div class="se-mon-c" style=" width:144px; float:left; border-right:1px #FFFFFF solid; height:26px;">{ACCOUNTCODE}</div>
+                    <div class="se-potin-c" style=" width:108px; float:left; border-right:1px #FFFFFF solid; height:26px;">{AMOUNT}</div>
+                    <div class="se-potin-c" style=" width:166px; float:left; height:26px; border-right:1px solid #FFFFFF;">{STATUS}</div>
+              </div>
+              <!-- END BLOCK : Data -->
+              <!-- START BLOCK : NoData -->
+              <div class="main_table_cen"><div class="text-3" style=" height:30px; float:left; line-height:26px; margin:10px 0px 0px 400px;">{_NoData}</div></div>
+              <!-- END BLOCK : NoData -->
+            
+            
+         
+      </div>
+
+				</div>
+            </div><!--zhenren end-->
+    	</div>
+    </div>
+
+    
+    
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+<!-- INCLUDE BLOCK : WEB_LOGIN -->
+</body>
+</html>

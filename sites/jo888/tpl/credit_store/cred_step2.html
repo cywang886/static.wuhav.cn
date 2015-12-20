@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITLE}</title>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript">
+function form1Chk(){
+	/*
+	if( document.all.form1.paytype.value == "I"){
+		if(document.all.form1.MyCardCardId.value=='')
+			{ document.all.form1.MyCardCardId.focus();	alert("MYCARD 卡號 請勿空白!!"); return false; }
+		if(document.all.form1.MyCArdPwd.value=='')
+			{ document.all.form1.MyCArdPwd.focus();		alert("MYCARD 密碼 請勿空白!!"); return false; }
+	}
+	*/
+	document.form1.submit();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0">
+<!-- INCLUDE BLOCK : WEB_HEAD -->
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td valign="top" class="login_tis">
+    <!-- INCLUDE BLOCK : WEB_LOGIN -->
+    </td>
+    <td width="770" valign="top"><br>
+      <table border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/pic_stored-value.jpg" width="300" height="55" /></td>
+          <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/pic.jpg" width="440" height="55" /></td>
+        </tr>
+        <tr>
+          <td height="2" colspan="2"></td>
+        </tr>
+      </table>
+      <br />
+      <table width="720" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit_down.jpg" width="108" height="33" hspace="5" /></td>
+              <td><a href="atm.php"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_up.jpg" width="108" height="33" border="0" onmouseover="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_down.jpg'" onmouseout="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_atm_up.jpg'" /></a></td>
+              <td><a href="cred_tip.php"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_up.jpg" width="133" height="33" hspace="5" border="0" onmouseover="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_down.jpg'" onmouseout="this.src='http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_credit-rule_up.jpg'" /></a></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td valign="top" class="main_line"><br />
+            <form id="form1" name="form1" method="post" action="cred_step3.php">
+              <input name="cash" type="hidden" value="{CASH}">			<!--消費金額-->
+              <input name="amount" type="hidden" value="{AMOUNT}">              <!--購得點數-->
+              <input name="bonus" type="hidden" value="{BONUS}">             	<!--贈點-->
+              <input name="paytype" type="hidden" value="{PAYTYPE}">            <!--付費方式(主項)-->
+              <input name="subtype" type="hidden" value="{SUBTYPE}">            <!--付費方式(副項)-->
+              <input name="mpid" type="hidden" value="{MPID}">              	<!--統振 系統商代號-->
+
+              <table width="550" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="main_title_subject"><img src="http://www.cdcnli.com/direct/sites/jo888/images/main_title_subject.jpg" width="71" height="34" align="absmiddle">購買資訊</td>
+                </tr>
+              </table>
+              <table width="550" border="0" align="center" cellpadding="3" cellspacing="1" class="main_table_line">
+                <tr style="display:{SHOW_PAYTYPE}">
+                  <td width="100" align="center" class="main_table_tit_1">消費金額</td>
+                  <td bgcolor="#FFFFFF">{CASH} 元</td>
+                </tr>
+                <tr style="display:{SHOW_PAYTYPE}">
+                  <td align="center" class="main_table_tit_1">購得點數</td>
+                  <td bgcolor="#FFFFFF">{AMOUNT}</td>
+                </tr>
+                <tr style="display:{SHOW_MYCARD}">
+                  <td align="center" class="main_table_tit_1">MYCARD 卡號</td>
+                  <td bgcolor="#FFFFFF"><input name="MyCardCardId" type="text" id="MyCardCardId" value="" /></td>
+                </tr>
+                <tr style="display:{SHOW_MYCARD}">
+                  <td align="center" class="main_table_tit_1">MYCARD 密碼</td>
+                  <td bgcolor="#FFFFFF"><input name="MyCArdPwd" type="text" id="MyCArdPwd" value="" /></td>
+                </tr>
+                <tr>
+                  <td align="center" class="main_table_tit_1">付費方式</td>
+                  <td bgcolor="#FFFFFF">{PAYTYPENAME}</td>
+                </tr>
+              </table>
+         <p align="center"><img src="http://www.cdcnli.com/direct/sites/jo888/images/{LANGX}/btn_send.png" width="92" height="38" border="0" style="cursor: pointer" onclick="return form1Chk()" /></p>
+      </form>
+         </td>
+        </tr>
+      </table>
+    <br /></td>
+  </tr>
+</table>
+</body>
+</html>

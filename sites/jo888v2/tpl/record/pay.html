@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<link href="../../sites/{SITE}/style/calendar.css" rel="stylesheet" type="text/css" />
+<script src="../../js/calendar.js" type="text/javascript"></script>
+<script language="javascript">
+function getD(s,e){
+	var obj = document.getElementById("sForm");
+	obj.date_s.value = s;
+	obj.date_e.value = e;
+	obj.submit();
+}
+</script>
+<title>{TITLE}</title>
+</head>
+
+<body class="inbody">
+	
+
+
+	<!-- INCLUDE BLOCK : WEB_HEAD -->
+
+
+	<div class="info-top-box3">
+    	<div class="not-top-box3-con"></div>
+    </div>
+
+	
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_MEMBERs49}</a>
+            </div>
+    
+    		<div class="zhenren">
+                   
+				<div class="search-box">
+                
+                	<div class="j1-box-left">
+                    	<div class="j1-box-left-title">{_MEMBERs}<span>{_MEMBERsE}</span></div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="../user/info.php"><span>{_MEMBERs1}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="../user/chgpwd.php"><span>{_MEMBERs2}</span></a>
+                        </div>        
+                        
+                        <div class="info-left-btn2">
+                            <a href="../user/modify.php"><span>{_MEMBERs3}</span></a>
+                        </div>
+                        
+                        <!--div class="info-left-btn1">
+                            <span>{_MEMBERs49}</span>
+                        </div>
+                        <div class="j1-s"></div> 
+                        
+                        <div class="info-left-btn2">
+                            <a href="withdrawals.php"><span>{_MEMBERs50}</span></a>
+                        </div-->
+                    </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="se-right-bigbox">
+                
+                	<div class="info-right-title">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/info-img01.png" width="130" height="130" />
+                        <div class="info-right-title-txt">{_MEMBERs5}{TITLE}</div>
+                        <div class="info-right-title-txt2">{_MEMBERs6}{TITLE}{_MEMBERs6-1}</div>
+                    </div>
+                
+                	
+                    
+                    
+                    
+                    
+                    
+                    
+                   <div class="not_license">
+
+                        
+                        
+                        
+                        
+                        <form name="sForm" id="sForm" method="get">
+                    
+                            <div class="search_tool">
+    
+                              <label>{_MEMBERs47} :&nbsp;</label>
+                              
+                              
+                              <input type="text" name="date_s" id="sDate_S" size="10" maxlength="10" value="{DATE_S}" class="za_text" onKeyPress="return ChkKeyCode('I',event);" />
+                              <span style="float:left; margin:7px 3px 0px 3px;">
+							  	<script language="JavaScript">new tcal({'controlname':'sDate_S', 'langx':'{LANGX}', 'imgpath':'http://static.sj77.net/images/cal/'});</script>
+        					  </span>
+                              
+    
+                              <span class="date-icon"></span>
+    
+                              <label>&nbsp;~&nbsp;</label>
+                                                       
+    
+                              <input type="text" name="date_e" id="SDate_E" value="{DATE_E}" class="za_text" onKeyPress="return ChkKeyCode('I',event);" />
+    						  <span style="float:left; margin:7px 3px 0px 3px;">
+                              	<script language="JavaScript">new tcal({ 'controlname': 'SDate_E', 'langx': '{LANGX}', 'imgpath': 'http://static.sj77.net/images/cal/'});</script>
+                              </span>
+    
+                              <span class="date-icon"></span>
+    
+                              <input type="submit" value="{_Search}" class="za_button" style="margin-left:51px;" />
+    
+                    <label>{_Di} </label>
+    				<select class="sea-down1" name="page" id="sPage" onchange="this.form.submit();">{PAGE_OPTION}</select>    
+                    <label>/</label>
+                    <label> {PAGE_TOTAL} {_Page} &nbsp; </label>
+    							
+                                <a class="btn-paging" href="javascript:void(0);" onclick="getD('{WEEK_L_S}','{WEEK_L_E}');"><font color="#C00000"><b>{_LastWeek}</b></font></a>
+                                <a class="btn-paging" href="javascript:void(0);" onclick="getD('{WEEK_S}','{WEEK_E}');"><font color="#C00000"><b>{_ThisWeek}</b></font></a>
+    
+                            </div>
+                        </form>
+                        
+                        <!-- START BLOCK : Data -->
+                        <div class="search_tool-con">
+                        	<div class="se-id">ID</div>
+                            <div class="se-mon">{_RealMoney}</div>
+                            <div class="se-mon">{_Amount}</div>
+                            <div class="se-potin">{_Bonus}</div>
+                            <div class="se-potin">{_Total}</div>
+                            <div class="se-potin-late">{_PayDT}</div>	
+                        </div>
+                        
+                        <div class="search_tool-con-2" style="height:auto;">
+                        	<div class="se-id-c">{ID}</div>
+                            <div class="se-mon-c">{REALMONEY}</div>
+                            <div class="se-mon-c">{AMOUNT}</div>
+                            <div class="se-potin-c">{BONUS}</div>
+                            <div class="se-potin-c">{TOTAL}</div>
+                            <div class="se-potin-c-late">{PAYDT}</div>	
+                        </div>
+                         <!-- END BLOCK : Data -->
+                          <!-- START BLOCK : NoData -->
+                          <div style="width:674px; height:auto; float:left; margin-left:15px; background-color:#FFF; padding:12px 0px; margin-top:-5px;">
+                          	<div class="main_table_cen"><div class="text-3" style=" line-height:26px;">{_NoData}</div></div>
+                          </div>
+                         <!-- END BLOCK : NoData -->
+                        
+             		</div>
+                    
+                    
+                    
+                    </div><!-- bigbox-->
+                 
+                </div><!--search-box  end-->
+
+            </div><!--zhenren end-->
+    
+    
+    	</div>
+    </div>
+
+
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+
+
+</body>
+</html>

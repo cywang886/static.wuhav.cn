@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+
+    <!-- INCLUDE BLOCK : WEB_LOGIN -->
+	<!-- INCLUDE BLOCK : WEB_HEAD -->	
+    <div class="for-top-box3">
+    	<div class="for-top-box3-con"></div>
+    </div>
+    
+    <!------------------中間開始------------------------>
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_ForgetPwd}</a>
+        </div>
+    	<div class="zhenren">
+		<div class="j1-box">
+        	       	<div class="j1-box-left">
+                    		<div class="for-box-left-title">{_ForgetPwd}<span>{_MEMBERs13}</span></div>
+                  	</div>
+                	<div class="j1-right-title">{_ForgetPwd}</div>
+                	<form name="forgetform" id="forgetform" action="" method="post">
+            		<input type="hidden" name="act" value="forget" />
+                   	<div class="join2_license">
+                        	<div class="join2_1-box">
+                        		<div class="join2_1-title">{_InputUsername} :</div>
+                            		<input class="j2-in1" type="text" name="username" value="" onkeypress="return ChkKeyCode('L',event);" />
+                       		</div>
+                        	<div class="join2_1-box">
+                        		<div class="join2_1-title">{_InputMobileTel} :</div>
+                            		<input class="j2-in1" type="text" name="mobiletel" value="" onkeypress="return ChkKeyCode('P',event);" />
+                        	</div>
+                        	<div class="join2_2-box">
+                            		<input class="za_button forbtn-form br" value="{_Sure}" type="submit" />
+                    		</div>
+                    	</div>
+                    	</form>
+                </div><!--j1-box  end-->
+            </div><!--zhenren end-->
+    	</div>
+    </div>
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+
+</body>
+</html>

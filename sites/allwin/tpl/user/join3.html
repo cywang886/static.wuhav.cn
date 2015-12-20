@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+<!-- INCLUDE BLOCK : WEB_HEAD -->	
+<div class="join1-top-box3">
+	<div class="join1-top-box3-con"></div>
+</div>
+<!------------------中間開始------------------------>
+<div class="game-md-box">
+	<div class="game-md-box-con">
+    	<div class="position">
+        	<span>{_Record_1}：</span>
+            <a href="#">{_NewMem}</a>
+        </div>
+		<div class="zhenren">
+		<div class="j1-box">
+            	<div class="j1-box-left">
+                	<div class="j1-box-left-title">{_MEMBERs14}<span>{_MEMBERs15}</span></div>
+                    <div class="j1-left-btn2">
+                       	<div>01</div>
+    	        	<span>{_MEMBERs16}</span>
+                    </div>
+                    <div class="j1-left-btn2">
+                    	<div>02</div>
+                        	<span>{_MEMBERs17}</span>
+                    </div>                         
+                    <div class="j1-left-btn1">
+                    	<div>03</div>
+                        	<span>{_MEMBERs18}</span>
+                    </div>
+                    <div class="j1-s"></div>
+                            <div class="j1-left-btn2">
+                    	<div>04</div>
+                        	<span>{_MEMBERs19}</span>
+                    </div>
+                </div>
+                <div class="j1-right-title">
+                	<div class="j1-right-titlespan2">{_join3_title}</div>
+                </div>
+            
+               <div class="join2_license">
+					<div class="join2_1-box">
+                    	<div class="join2_1-title">{_Username} :</div>
+                        	<div class="join3_1-title">{USERNAME}</div>
+                    </div>
+           			<div class="join2_1-box">
+                       	<div class="join2_1-title">{_FirstName} :</div>
+    	                <div class="join3_1-title">{FIRSTNAME}</div>
+                    </div>
+                    <div class="join2_1-box">
+                    	<div class="join2_1-title">{_LastName} :</div>
+            	        <div class="join3_1-title">{LASTNAME}</div>
+                    </div>
+                    <div class="join2_1-box">
+                    	<div class="join2_1-title">{_Gender} :</div>
+                    	<div class="join3_1-title">{GENDER}</div>
+                    </div>
+					<div class="join2_1-box">
+                    	<div class="join2_1-title">{_MobileTel} :</div>
+    	                <div class="join3_1-title">{MOBILETEL}</div>
+                    </div>
+                    
+                    <div class="join2_1-box">
+                    	<div class="join2_1-title">{_join3_phone1} :</div>
+            	        <div class="join2_1-boxcor1"><b>{MOBILETEL}</b> ,<br />{_join3_phone2}</div>
+                    </div>
+                    
+					<div class="join2_1-box-99">
+                    	<input class="join3-btn1" type="button" name="sendcode" id="SendCode" value="{_SendPhoneCode}" />
+                    	<input class="join3-btn1" type="button" name="CANCEL" value="{_Back}" onclick="window.history.back();" />
+					</div>
+                    
+                    <div class="join3_3-box">
+                    {_join3_memo1}<br />
+                    {_join3_memo2}<br />
+                    {_join3_memo3}<br />
+                    {_join3_memo4}
+					</div>
+
+                    <div class="join3_3-box" id="sms_code"  style="display:{SNONE};">
+                    	<form action="join4.php" method="post" name="newform" id="newform">
+                    	<input type="hidden" name="act" value="add" />
+                    	<div class="join2_1-title">{_SendCode} :</div>
+                        	<input class="j2-in1" type="text" name="smscode" value="" size="12" onkeypress="return ChkKeyCode('+I',event);" />
+                    	<input class="join3-btn2" type="submit" value="{_Sure}" />
+                    	</form>
+                    </div>
+                    
+                    <div class="j2-right-title"></div>
+                </div>
+            </div><!--j1-box  end-->
+        </div><!--zhenren end-->
+  	</div>
+</div>
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+    
+<iframe id="SmsFrame" src="" width="0" height="0" frameborder="0"></iframe>
+<script>
+$("#SendCode").click(function(){
+	$("#SmsFrame").attr("src", "smscode.php");
+	$("#sms_code").css("display","");
+});
+</script>
+</body>
+</html>

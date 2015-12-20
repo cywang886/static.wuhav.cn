@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<script type="text/javascript" src="../../js/jquery-latest.min.js"></script>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+
+    <!-- INCLUDE BLOCK : WEB_HEAD -->	
+    <div class="info-top-box3">
+    	<div class="not-top-box3-con"></div>
+    </div>
+
+	
+    
+    <!------------------中間開始------------------------>
+	
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+    
+    	
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_PwdModify}</a>
+            </div>
+    
+    		<div class="zhenren">
+                   
+				<div class="j1-box">
+                
+                	<div class="j1-box-left">
+                    	<div class="j1-box-left-title">{_MEMBERs}<span>{_MEMBERsE}</span></div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="info.php"><span>{_MEMBERs1}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn1">
+                            <span>{_MEMBERs2}</span>
+                        </div>    
+                        <div class="j1-s"></div>       
+                        
+                        <div class="info-left-btn2">
+                            <a href="modify.php"><span>{_MEMBERs3}</span></a>
+                        </div>
+                        
+                        <!--div class="info-left-btn2">
+                            <a href="../record/pay.php"><span>{_MEMBERs49}</span></a>
+                        </div>
+                        
+                        <div class="info-left-btn2">
+                            <a href="../record/withdrawals.php"><span>{_MEMBERs50}</span></a>
+                        </div-->
+                        
+                  </div>
+          
+
+                
+                	<div class="info-right-title">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/info-img01.png" width="130" height="130" />
+                        <div class="info-right-title-txt">{_MEMBERs5}{TITLE}</div>
+                        <div class="info-right-title-txt2">{_MEMBERs6}{TITLE}{_MEMBERs6-1}</div>
+                    </div>
+                
+   
+                    
+                   <div class="not_license">
+						<!-- START BLOCK : chgpwd -->
+                          <form action="" method="post" name="pwdform" id="pwdform">
+                            <input type="hidden" name="act" value="chgpwd" />
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_OldPwd} :</div>
+                            <input class="j2-in1" type="text" size="12" maxlength="12" name="oldpwd" value="" onkeypress="return ChkKeyCode('L',event);"  />
+                        </div>
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_NewPwd} :</div>
+                            <input class="j2-in1" type="password" size="12" maxlength="12"  name="newpwd" value="" onkeypress="return ChkKeyCode('L',event);" />
+                        </div>
+                        
+                        <div class="info2_1-box">
+                        	<div class="info2_1-title">{_ChkPwd} :</div>
+                            <input class="j2-in1" type="password" size="12" maxlength="12"  name="chkpwd" value="" onkeypress="return ChkKeyCode('L',event);"  />
+                            <div class="for-www">{_PwdNotes}</div>
+                        </div>
+                        
+                        
+                        
+                     
+                        
+                        
+                        
+                        <div class="info2_2-box">
+                            <input class="za_button btn-form" type="reset" style="margin-left:5px;" />
+                            <input class="za_button btn-form br" value="{_Sure}" type="submit" style="margin-left:5px;"/>
+                    	</div>
+                        
+                        </form>
+                          <!-- END BLOCK : chgpwd -->
+                          <!-- START BLOCK : Community -->
+                            <tr bgcolor="#ffffff">
+                            	<td class="main_table_tit_1">{_ChgPwdMemo}</td>
+                            </tr>
+                          <!-- END BLOCK : Community -->
+        
+						<!--div class="j2-right-title"></div-->
+                       
+             		</div>
+
+                </div><!--j1-box  end-->
+
+            </div><!--zhenren end-->
+    
+    
+    
+    
+    	</div>
+    </div>
+
+
+    
+    
+  
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+#chv2-ad IMG {
+	FLOAT: left;
+}
+#main_1_chv2_ad2 {
+	PADDING-BOTTOM: 19px;
+	MARGIN: 0px auto;
+	WIDTH: 998px;
+	HEIGHT: 175px;
+	_margin-top: 10px
+}
+#main_1_chv2_ad2 .datelist_03 {
+	HEIGHT: 175px;
+	MARGIN-LEFT: 245px;
+	OVERFLOW: hidden
+}
+#main_1_chv2_ad2 .datelist_03 LI {
+	WIDTH: 237px
+}
+#main_1_chv2_ad2 .datelist_03 LI IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#main_1_chv2_ad2 .datelist_03 A {
+	COLOR: #000
+}
+#main_1_chv2_ad2 .datelist_03 A:hover {
+	COLOR: #943bd2; TEXT-DECORATION: underline
+}
+#main_1_chv2_ad2 .Enter_Lbtn {
+	MARGIN-TOP: 70px; FLOAT: left; MARGIN-LEFT: 7px; _margin-left: 4px
+}
+#main_1_chv2_ad2 .Enter_Rbtn {
+	MARGIN-TOP: 70px; FLOAT: right; MARGIN-RIGHT: 7px; _margin-right: 4px
+}
+#main_1_chv2_ad2 .more_pic {
+	WIDTH: 940px;
+	PADDING-TOP: 10px;
+	_margin-left: 15px;
+	_float: left
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px;
+	LIST-STYLE-TYPE: none
+}
+IMG {
+	BORDER-BOTTOM-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none;
+	BORDER-LEFT-STYLE: none;
+}
+.demo {
+	POSITION: relative;
+	WIDTH: 725px;
+	HEIGHT: 210px;
+	OVERFLOW: hidden;
+	border: 2px solid #CCC;
+}
+.num {
+	Z-INDEX: 10;
+	POSITION: absolute;
+	TEXT-ALIGN: right;
+	WIDTH: 720px;
+	TOP: 183px;
+	font-family: Arial;
+	color: #CCC;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.num A {
+	TEXT-ALIGN: center;
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 17px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: inline-block;
+	HEIGHT: 17px;
+	CURSOR: pointer;
+	margin-top: 6px;
+	margin-right: 4px;
+	margin-bottom: 0px;
+	background-image: url(http://static.plm168.com/images/a.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.num A.cur {
+	BACKGROUND: url(http://static.plm168.com/images/b.png) no-repeat;
+	color: #000;
+}
+.demo UL {
+	Z-INDEX: 5; POSITION: relative
+}
+.demo UL LI {
+	DISPLAY: none
+}
+.nums {
+	Z-INDEX: 10;
+	POSITION: absolute;
+	TEXT-ALIGN: right;
+	FILTER: alpha(style=1,opacity=55,finishOpacity=60);
+	WIDTH: 725px;
+	BACKGROUND: #000;
+	HEIGHT: 27px;
+	TOP: 183px;
+	opacity: 0.65;
+}

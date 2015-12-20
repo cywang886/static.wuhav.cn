@@ -1,0 +1,87 @@
+tr {font-family: "Arial"; font-size: 12px}
+
+.m_tline a:link {
+	text-decoration: underline;
+	color: #900;
+}
+.m_tline a:visited {
+	text-decoration: underline;
+	color: #900;
+}
+.m_tline a:hover {
+	text-decoration: none;
+	color: #326400;
+}
+
+.m_tab a:link {
+	color: #03C;
+	text-decoration: none;
+}
+.m_tab a:visited {
+	text-decoration: none;
+	color: #03C;
+}
+.m_tab a:hover {
+	text-decoration: underline;
+	color: #666;
+}
+
+.m_tline {
+	background-image:    url(http://www.wuhav.cn/direct/sites/kxm1688/images/bar.jpg);
+	background-repeat: repeat-x;
+	height: 29px;
+}
+.m_tab {
+	padding-right: 2px;
+	padding-top: 4px;
+	background-color: #86b059;
+	border: 2px solid #e4ffc7;
+	padding-left: 2px;
+	padding-bottom: 2px;
+}
+
+.m_cen {  background-color: #FFFFFF; text-align: center}
+.m_title{
+	background-color: #326400;
+	text-align: center;
+	color: #FFF;
+	padding-top: 2px;
+	padding-bottom: 1px;
+}
+
+.m_rig {text-align: right; background-color: #FFFFFF}
+.m_rig_re {
+	background-color: #ffd88d;
+	text-align: right
+}
+
+.m_title_BK {
+	background-color: #e0e0e0;
+	text-align: center;
+}
+
+.za_button {
+ font-family: "Arial";
+ font-size: 12px;
+ height: 20px;
+ padding-top: 1px
+}
+.za_select {
+ font-family: "Arial";
+ font-size: 12px;
+ height: 18px
+}
+.za_text {
+ background-color: #FFFFFF;
+ height: 18px;
+ padding-right: 2px;
+ padding-left: 2px;
+ border: #000000;
+ border-style: solid;
+ border-top-width: 1px;
+ border-right-width: 1px;
+ border-bottom-width: 1px;
+ border-left-width: 1px;
+ font-family: "Arial";
+ font-size: 12px
+}

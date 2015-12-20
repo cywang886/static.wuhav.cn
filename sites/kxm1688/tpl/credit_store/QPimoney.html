@@ -1,0 +1,58 @@
+<html><!-- InstanceBegin template="/Templates/page_tw.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<table width="900" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td >
+    	<table border="0" cellspacing="0" cellpadding="0">
+      	<tr>
+      	  <td class="news_title"><font color="0000FF">統振 I-Money </font> 介接：第一步 必須把 <font color="FF0000">※</font>的資料填入，再按<font color="FF0000"> 送 出 </font>，
+      		後台URL <font color="FF0000">http://60.248.165.68:8888/</font> 商家代碼 : <font color="FF0000">prohost</font> 登入帳號 : <font color="FF0000">prohost</font> 預設密碼 :<font color="FF0000">prohost </font>後台要先做一些設定</td>
+      	</tr>
+    	</table>
+    	
+      	<table width="100%" border="1" cellpadding="2" cellspacing="1"  class="webtest_line">
+      	  <!--<FORM id="form2"  NAME="form2" ACTION="" METHOD=POST onSubmit="return Form2Chk()">-->
+      	  <FORM id="form2"  NAME="form2" ACTION="http://60.248.165.68/api" METHOD="post">
+      	    <input type="hidden" name="flag" value="go">
+
+      	    <tr>
+      	      <td width="350"><font color="#FF0000">※</font>&nbsp;&nbsp;商家代碼 (商家登入帳號)_account_no</td>
+      	      <td ><input name="account_no" type="text" value={ACCOUNT}> prohost</td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;遊戲名稱 ( )_game_no</td>
+      	      <td ><input name="game_no" type="text" value={GAME}> 
+      	      goldenparis</td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;玩家帳號 ()_user_no</td>
+      	      <td ><input name="user_no" type="text" value={USER}>
+   	          jack8</td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;廠商自訂的參數( ps 參數 )_para</td>
+      	      <td ><input name="para" type="text" value={PARA}></td>
+      	    </tr>
+            <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;廠商自定 key 值()_key</td>
+      	      <td ><input name="key" type="text" value={IMKEY}> 
+      	        prohost</td>
+      	    </tr>
+      	    <tr>
+      	      <td >回傳資訊</td>
+      	      <td >{RETURNSTR}</td>                
+      	    </tr>                                    
+      	    <tr class="webtest_cen_b">
+      	      <td height="40" colspan="2"><input type="submit" name="button" id="button" value="第一步"></td>
+      	    </tr>
+      	  </form>
+      	</table>
+    </td>
+  </tr>
+</table>  
+
+
+</body>
+</html>

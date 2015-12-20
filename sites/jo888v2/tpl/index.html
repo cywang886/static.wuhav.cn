@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../sites/{SITE}/style/clearfix.css"/>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+
+<!-- 新banner 輪播 -->
+<script type="text/javascript">
+	$(function(){
+		var $block = $('#abgne_fade_pic'), 
+			$ad = $block.find('.ad'),
+			showIndex = 0,			// 預設要先顯示那一張
+			fadeOutSpeed = 2000,	// 淡出的速度
+			fadeInSpeed = 2000,		// 淡入的速度
+			defaultZ = 9999,			// 預設的 z-index
+			isHover = false,
+			timer, speed = 2000;	// 計時器及輪播切換的速度
+		
+		// 先把其它圖片的變成透明
+		$ad.css({
+			opacity: 0,
+			zIndex: defaultZ - 1
+		}).eq(showIndex).css({
+			opacity: 1,
+			zIndex: defaultZ
+		});
+		
+		// 組出右下的按鈕
+		var str = '';
+		for(var i=0;i<$ad.length;i++){
+			str += '<a href="#">' + (i + 1) + '</a>';
+		}
+		var $controlA = $('#abgne_fade_pic').append($('<div class="control">' + str + '</div>').css('zIndex', defaultZ + 1)).find('.control a');
+
+		// 當按鈕被點選時
+		// 若要變成滑鼠滑入來切換時, 可以把 click 換成 mouseover
+		$controlA.click(function(){
+			// 取得目前點擊的號碼
+			showIndex = $(this).text() * 1 - 1;
+			
+			// 顯示相對應的區域並把其它區域變成透明
+			$ad.eq(showIndex).stop().fadeTo(fadeInSpeed, 1, function(){
+				if(!isHover){
+					// 啟動計時器
+					timer = setTimeout(autoClick, speed + fadeInSpeed);
+				}
+			}).css('zIndex', defaultZ).siblings('a').stop().fadeTo(fadeOutSpeed, 0).css('zIndex', defaultZ - 1);
+			// 讓 a 加上 .on
+			$(this).addClass('on').siblings().removeClass('on');
+
+			return false;
+		}).focus(function(){
+			$(this).blur();
+		}).eq(showIndex).addClass('on');
+
+		$block.hover(function(){
+			isHover = true;
+			// 停止計時器
+			clearTimeout(timer);
+		}, function(){
+			isHover = false;
+			// 啟動計時器
+			timer = setTimeout(autoClick, speed);
+		})
+		
+		// 自動點擊下一個
+		function autoClick(){
+			if(isHover) return;
+			showIndex = (showIndex + 1) % $controlA.length;
+			$controlA.eq(showIndex).click();
+		}
+		
+		// 啟動計時器
+		timer = setTimeout(autoClick, speed);
+	});
+</script>
+<!-- 新輪播結束-->
+
+<title>新建</title>
+</head>
+
+<body class="inbody">
+	
+<!-- INCLUDE BLOCK : WEB_LOGIN -->
+
+
+<!-- INCLUDE BLOCK : WEB_HEAD -->
+
+	<div class="in-top-box3">
+    	<div class="in-top-box3-con" id="abgne_fade_pic">
+        <a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n7.png?v=4001" /></a>
+			<a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n2.png?v=4104" /></a>
+    		<a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n4.png?v=4104" /></a>
+       		<a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n5.png?v=404" /></a>
+   			<a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n1.png?v=440" /></a>
+      		<a href="#" class="ad"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/n3.png?v=4004" /></a>
+      		
+     	</div>
+    </div>
+
+    
+<!-- ------------------------- 3格倫輪播 ------------------- -->    
+<div class="indexmain">
+    <div class="gundong">
+        <div class="rollBox">
+            <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+            
+            
+            <div class="Cont" id="ISL_Cont">
+                <div class="ScrCont">
+                
+					<div id="List1">
+                        <!-- 图片列表 begin -->
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i1.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>1真人百家乐</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i2.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>1真人轮盘</span></div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i3.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人骰宝</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i4.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人鱼虾蟹</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i5.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人龙虎</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-1.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>老虎机</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-3.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>运动投注</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-4.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>7PK/5PK</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-5.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>餐厅宾果</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-6.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>台湾时时彩</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-7.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>3D彩</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-8.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>机械百家</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-9.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>加勒比海</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-10.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>大陆时时彩</span> </div>
+                        <!-- 图片列表 end -->
+                 	</div>
+                   
+                   
+           			<div id="List2">
+                         <!-- 图片列表 begin -->
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i1.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人百家乐</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i2.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人轮盘</span></div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i3.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人骰宝</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i4.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人鱼虾蟹</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/i5.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>真人龙虎</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-1.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>老虎机</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-3.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>运动投注</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-4.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>7PK/5PK</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-5.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>餐厅宾果</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-6.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>台湾时时彩</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-7.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>3D彩</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-8.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>机械百家</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-9.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>加勒比海</span> </div>
+                        <div class="Contli"><a href="#"><img src="http://{IMG_URL}/sites/{SITE}/images/game-10.jpg?v=123444" width="250" height="167" border="0" /></a><br /><span>大陆时时彩</span> </div>
+                        <!-- 图片列表 end -->
+             		</div>
+                   
+                </div>
+            </div>
+            
+            <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+            
+        </div>
+        <script type="text/javascript" src="../js/gundong.js"></script>
+    </div>
+</div>
+<!-- ------------------------- 3格倫輪播結束 ------------------- -->     
+    
+    
+<div class="in-line-bg">
+	<!-- START BLOCK : Flash -->
+		<div id="jp_zone"></div>
+		<script language="JavaScript">
+			var flashvars = { "CGUID":null,"Lang":"{LANGX}","Currency":"1","jplink":"{JPHOST}","jpport":"{JPPORT}" };
+			var flashparam = { "play":"true","loop":"true","menu":"true","quality":"high","wmode":"transparent","bgcolor":"#000000","devicefont":"true","allowfullscreen":"true","allowscriptaccess":"always","allownetworking":"all","scale":"showAll" };
+			var flashattr = { "id":"jp_zone","name":"jp_zone","align":"middle" };
+			var rand_num = Math.floor(Math.random() * 10000);
+			swfobject.embedSWF("../images/SV888MenuJP2.swf?"+rand_num, "jp_zone", "100%", "100%", "11.0.0", "../game/expressInstall.swf", flashvars, flashparam, flashattr, function(e){ });
+		</script>
+	<!-- END BLOCK : Flash -->
+    
+  <div class="in-line-bg-con">
+    	<div class="in-d01">
+        	<div class="in-d03-title"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/in-d01-title.png?v=4444444" width="124" height="61" /></div>
+            <div class="in-d01-btn"><a href="http://{COMID_WEBURL}/app/rule.php?agid={AGID}&langx={LANGX}&page=1_1" target="_new">{_MEMBERs52}</a></div>
+            <!--div class="in-d01-btn"><a href="javascript:void(0);" onclick="testplay();">{_MEMBERs53}</a></div-->
+            <div id="aduser-lin" class="in-d01-btn" style="display:;"><a href="../../app/user/join1.php">{_MEMBERs54}</a></div>
+            <div id="ingame" class="in-d01-btn" style="display:none;"><a href="javascript:void(0);" onclick="openurl('');">{_MEMBERs55}</a></div>
+        </div>
+        
+        <div class="in-d03">
+        	<div class="in-d03-title"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/in-d03-title.png?v=4444444" width="124" height="61" /></div>
+            <div class="in-d01-btn"><a class='inline' href="#inline_content" >{_MEMBERs52}</a></div>
+            <div id="aduser" class="in-d01-btn" style="display:;"><a href="../../app/user/join1.php">{_MEMBERs54}</a></div>
+            <div id="ingame" class="in-d01-btn" style="display:none;"><a href="javascript:void(0);" onclick="openurl('');">{_MEMBERs55}</a></div>
+        </div>
+        <div style="display:none;">
+                <div id="inline_content" style="padding:10px; background:#fff; ">
+            	<p style="font-size:18px;">{_MEMBERs56}</p>
+            </div>
+   		</div>
+        
+        <div class="in-d02">
+        	<div class="in-d03-title"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/in-d02-title.png?v=4444444" width="124" height="61" /></div>
+            	<div class="in-d01-btn"><a href="http://{COMID_WEBURL}/app/rule.php?agid={AGID}&langx={LANGX}&page=8_1" target="_new">{_MEMBERs52}</a></div>
+            	<div id="aduser2" class="in-d01-btn" style="display:;"><a href="../../app/user/join1.php">{_MEMBERs54}</a></div>
+        	<div id="ingame2" class="in-d01-btn" style="display:none;"><a href="javascript:void(0);" onclick="openurl('');">{_MEMBERs55}</a></div>
+        </div>
+    </div>
+</div>   
+    
+    
+    
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+   
+    
+<div style="display:none">
+
+</div></body>
+</html>

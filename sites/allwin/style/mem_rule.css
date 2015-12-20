@@ -1,0 +1,93 @@
+.text-01 {
+ font-size: 18px;
+ color: #357ece;
+ font-weight: bold;
+ background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/rule_ph24.gif);
+ background-repeat: no-repeat;
+ padding-left: 20px;
+ height: 30px;
+ background-position: left bottom;
+ padding-top: 3px;
+}
+
+.text-02 {
+ font-size: 13px;
+ color: #333333;
+ font-weight: bold;
+ background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/rule_ph24.gif);
+ background-repeat: no-repeat;
+ padding-left: 20px;
+ height: 30px;
+ background-position: left bottom;
+ padding-top: 3px;
+}
+
+.text-03 {
+ font-size: 15px;
+ color: #333333;
+ font-weight: bold;
+ background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/rule_ph25.gif);
+ background-repeat: repeat-x;
+ background-position: bottom;
+ height: 30px;
+}
+
+.text_01 {
+ FONT-SIZE: 13px;
+ COLOR: #C00;
+ font-weight: bold;
+ background-image: url(http://www.cdcnli.com/direct/sites/allwin/images/garrow.gif);
+ background-repeat: no-repeat;
+ padding-left: 18px;
+ background-position: 5px;
+}
+
+.text_02 {
+ FONT-SIZE: 13px;
+ COLOR: #0000FF;
+ padding-left: 10px;
+}
+.style1 {color: #ff0000;font-weight: bold;}
+.style2 {
+ color: #333333
+}
+.style3 {color: green}
+.style4 {color: blue}
+
+.b_tab {
+ border: 1px solid #85a3e0;
+}
+.b_game {
+ color: #FFFFFF;
+ background-color: #2d4694;
+ text-align: center;
+}
+.b_title {
+ text-align:center;
+ background-color: #4c69b8;
+ color: #FFFFFF;
+}
+.b_hline {
+ text-align:center;
+ background-color: #DADADA;
+}
+.b_cen1 {
+ background-color: #bbdede;
+ text-align: center;
+}
+.b_cen2 {
+ background-color: #ccddff;
+ text-align: center;
+}
+
+.b_rig {
+ BACKGROUND-COLOR: #ffffff;
+ TEXT-ALIGN: right
+}
+.m_game_blue {
+ color: #FFFFFF;
+ background-color: #2d4694;
+ padding-top: 3px;
+ height: 22px;
+ text-align: center;
+}

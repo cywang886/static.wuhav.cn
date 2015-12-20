@@ -1,0 +1,81 @@
+<html><!-- InstanceBegin template="/Templates/page_tw.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<table width="900" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td >
+    	<table border="0" cellspacing="0" cellpadding="0">
+      	<tr><td class="news_title"><font color="0000FF">統振</font> 介接：第一步 必須把 <font color="FF0000">※</font>的資料填入，再按<font color="FF0000"> 送 出 </font>PS: 單筆最高金額 不得超過 <font color="FF0000">1500</font> 元，一個月最高不得超過 <font color="FF0000">3000</font> 元，
+      		後台URL <font color="FF0000">http://www.quickpay.tw/ipay/</font> 商家代碼 : <font color="FF0000">prohost</font> 登入帳號 : <font color="FF0000">prohost</font> 預設密碼 : <font color="FF0000">1234</font> 後台要改為<font color="009900">啟用</font>才能進行測式
+	
+      		</td></tr>
+    	</table>
+    	
+      	<table width="100%" border="1" cellpadding="2" cellspacing="1"  class="webtest_line">
+      	  <!--<FORM id="form2"  NAME="form2" ACTION="" METHOD=POST onSubmit="return Form2Chk()">-->
+      	  <FORM id="form2"  NAME="form2" ACTION="" METHOD="">
+      	    <input type="hidden" name="pay_way" value="{PAY_WAY}">
+
+      	    <tr>
+      	      <td width="350"><font color="#FF0000">※</font>&nbsp;&nbsp;商家代碼 (商家登入帳號)_ICPID</td>
+      	      <td ><input name="ICPID" type="text" value={ICPID}> prohost</td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;商家訂單編號 (商家自行定義)_ICPOrderID</td>
+      	      <td ><input name="ICPOrderID" type="text" value={ICPORDERID}> A00019</td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;商家商品代號 (測試之產品代號)_ICPProdID</td>
+      	      <td ><input name="ICPProdID" type="text" value={ICPPRODID}> test_01</td>
+      	    </tr>
+  	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;小額付款代號 (電信業者代號)_MPID</td>
+      	      <td ><select name="MPID">
+      	      		<option value="" selected>---請選擇---</option>
+      	      		<option value="CHTOTP" {S_CHTOTP}>中華市話</option>
+      	      		<option value="HINET" {S_HINET}>中華hinet</option>
+      	      		<option value="839OTP" {S_839OTP}>中華行動</option>
+      	      		<option value="TTM" {S_TTM}>台哥大</option>
+      	      		<option value="FET" {S_FET}>遠傳/和信</option>
+      	      		<option value="VIBO" {S_VIBO}>威寶</option>
+      	      		<option value="APT" {S_APT}>亞太</option>
+      	      	   </select></td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;商品價格_PO_PRICE</td>
+      	      <td >新台幣 <input name="PO_PRICE" type="text" value={POPRICE}> 元 整 (預設為 10 元)</td>
+      	    </tr>
+      	    <tr>
+      	      <td >商家訂單備註 (自行定義,可為空值)_Memo</td>
+      	      <td ><input name="Memo" type="text" value={MEMO}></td>
+      	    </tr>
+      	    <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;商家消費者識別代號 (消費者帳號)_ICPUserID</td>
+      	      <td ><input name="ICPUserID" type="text" value={MN}> jack8</td>
+      	    </tr>
+            <tr>
+      	      <td ><font color="#FF0000">※</font>&nbsp;&nbsp;電話 (消費者的電話)_MN</td>
+      	      <td ><input name="MN" type="text" value={MN}> 0953500456</td>
+      	    </tr>
+            <tr>
+      	      <td >訂單回覆網址_URL</td>
+      	      <td ><input name="URL" type="text" value={URL}> http://prohost.com.tw/app/plan/QP_order_success.php<br>(若不設定 為後台預設)</td>
+      	    </tr>
+
+      	    <tr>
+      	      <td >回傳資訊</td>
+      	      <td >{RETURNSTR}</td>                
+      	    </tr>                                    
+      	    <tr class="webtest_cen_b">
+      	      <td height="40" colspan="2"><input type="submit" name="button" id="button" value="送 出"></td>
+      	    </tr>
+      	  </form>
+      	</table>
+      </td>
+  </tr>
+</table>  
+
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/clearfix.css"/>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--分頁-->
+<script type="text/javascript">
+	$(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		var $defaultLi = $('.Hbtn1-2').eq(_showTab).addClass('active');
+		$('.tab_content').eq($defaultLi.index()).siblings().hide();
+		
+		// 當 li 頁籤被點擊時...
+		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		$('.Hbtn1-2').mouseover(function() {
+			// 找出 li 中的超連結 href(#id)
+			var $this = $(this),
+				_index = $this.index();
+			// 把目前點擊到的 li 頁籤加上 .active
+			// 並把兄弟元素中有 .active 的都移除 class
+			$this.addClass('active').siblings('.active').removeClass('active');
+			// 淡入相對應的內容並隱藏兄弟元素
+			$('.tab_content').eq(_index).stop(false, true).fadeIn().siblings().hide();
+
+			return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+</script>
+<!--分頁 END-->
+<title>{TITLE}</title>
+</head>
+<body class="inbody">
+
+    <!-- INCLUDE BLOCK : WEB_HEAD -->	
+    <div class="help-top-box3">
+    	<div class="not-top-box3-con"></div>
+    </div>
+    <!------------------中間開始------------------------>
+    <div class="game-md-box">
+    	<div class="game-md-box-con">
+        	<div class="position">
+            	<span>{_Record_1}：</span>
+                <a href="#">{_Helper}</a>
+            </div>
+    		<div class="zhenren">
+                   	<div class="j1-box">
+                    
+                    
+             
+                	<div class="j1-box-left">
+                    	<div class="j1-box-left-title">{_Helper}<span></span></div>
+                        
+                        <div class="tapbox-2">
+                        
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>常见问题</span></a>
+                            </div>
+                            
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>存款说明</span></a>
+                            </div>   
+                                    
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>取款说明</span></a>
+                            </div>
+                            
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>我的帐户</span></a>
+                            </div>
+                            
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>手机版</span></a>
+                            </div>
+                            
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>免责声明</span></a>
+                            </div>
+                            
+                            <div class="Hbtn1-2">
+                                <a href="#"><span>远端软体教学</span></a>
+                            </div>
+                 		</div><!--ta-->
+                    
+                    </div>
+                 
+                 
+                  <div class="info-right-title">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/info-img01.png" width="130" height="130" />
+                        <div class="info-right-title-txt">{_MEMBERs5}{TITLE}</div>
+                        <div class="info-right-title-txt2">{_MEMBERs6}{TITLE}{_MEMBERs6-1}</div>
+                  </div>
+                  
+                  
+					<div><!-- 不可拿掉 -->
+            	
+                   
+                	<div id="tab1" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">常见问题</div>
+                            <div class="help-txt2">一般常见问题</div>
+                            <div class="help-Q">1.	Q:{TITLE}线上接受那些货币？
+                            	<span>A：{TITLE}目前只支持人民币(RMB)币种</span>
+                            </div>
+                            
+                            <div class="help-Q">2.	Q:如何在{TITLE}账户中存款？
+                            	<span>A：在您准备在{TITLE}下注之前，您可以透过以下几种方式存入资金到您的帐户:<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;在线存款-线上支付平台<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;网银转帐<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;ATM现金入款<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)&nbsp;银行柜台<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)&nbsp;手机银行<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)&nbsp;ATM自动柜员机<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意:管理者将不接受任何银行支票或者信用卡银行存款，请用户采取以上推荐的存款方式。
+                                </span>
+                            </div>
+                            
+                            <div class="help-Q">3.	Q:如何从{TITLE}中提款？
+                            	<span>A：只提供一种转帐方式，即网上银行转帐，提交点数取款申请之后，因取款申请完成时间因买家时间不定，请会员见谅并且耐心等待，详情请查阅[取款说明]。</span>
+                            </div>
+                            
+                            <div class="help-Q">4.	Q:存款与取款时，需缴交手续费吗？
+                            	<span>A：手续费会根据活动规则而变动，参照[活动条款]<br/>所有存取款银行收费均由用户自行承担和偿付，{TITLE}将不予办理。<br/>关于申请托售会员需达到相应的取款条件才可进行取款，详情请查阅[取款说明]。</span>
+                            </div>
+                            
+                            <div class="help-Q">5.	Q:为什么我无法正常进入游戏呢？
+                            	<span>A：(1)&nbsp;请玩家先联机到其他当地主要网站 例如 Baidu 确认网络是否流畅。<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;请玩家确认计算机浏览器上方是否必须另外开启”允许”才可继续进行游戏。<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;以上如果均正常请立即通知代理。
+								</span>
+                            </div>
+                            
+                            <div class="help-Q">6.	Q:为何我玩到一半被踢出去？
+                            	<span>A：(1)&nbsp;请确认您的网络联机状态是否已中断。<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;系统账号采『后踢前』的方式，若账号被重复登入，前者将被踢出。
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div id="tab2" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">存款说明</div>
+                            <div class="help-txt2">存款常见问题</div>
+                            <div class="help-Q">1.	Q:如何通过国内转帐或存款方式进行存款？
+                            	<span>A：在您准备在{TITLE}下注之前，您可以透过以下几种方式存入资金到您的帐户：<br/>
+                                        在线存款:线上支付平台<br/>
+                                        线上支付平台储值流程<br/><br/>
+                                        Step 1:点选存款<br/>
+                                        <br/><br/>
+                                        <div class="clear"></div>
+                                        Step 2:选[线上支付平台]，且选择储值金额。<br/>
+                                        <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img02.jpg" width="365" height="369" /><br/><br/>
+                                        <div class="clear"></div>
+                                        Step 3:完善个人资料并且打勾同意条款点选[确认储值]。<br/>
+                                        <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img03.jpg" width="385" height="275" /><br/><br/>
+                                        <div class="clear"></div>
+                                        Step 4:确认送出即转到网路银行进行储值。
+                                        <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img04.jpg" width="397" height="157" /><br/><br/>
+                                        <div class="clear"></div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注:如进行线上支付平台遇到障碍请洽询客服，进行咨询。<br/><br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;网银转帐<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;ATM现金入款<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;银行柜台<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)&nbsp;手机银行<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)&nbsp;ATM自动柜员机<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以上储值方式，需透过客服并且向客服索取帐号进行储值，以下为储值流程：<br/><br/>
+                                        Step 1:完善个人资料并且打勾同意条款及选择[银行储值]再点选[确认储值]。<br/>
+                                        <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img05.jpg" width="425" height="304" /><br/><br/>
+                                        <div class="clear"></div>
+                                        Step 2:输入您的名字再点选开始聊天与客服进行对话。<br/>
+										<img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img06.jpg" width="426" height="76" /><br/><br/>
+                                        <div class="clear"></div>
+                                        Step 3:进入之后咨询客服储值帐号，完成汇款后请告知线上客服存款点数以及存款帐号，线上客服会手动将点数补到你的会员帐户中，即完成储点。<br/>
+										<img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img07.jpg" width="425" height="79" /><br/><br/>
+                                        <div class="clear"></div>
+                                        <span style="color:#F00;">注意！</span>
+                                        1.会员如采取跨行手机银行、网路银行、柜台转帐产生的银行转帐手续费用需会员自行承担。<br/>
+										2.管理者将不接受任何银行支票或者信用卡银行存款，请用户采取以上推荐的存款方式。<br/>
+								</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div id="tab3" class="tab_content">
+                    	<div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">取款说明</div>
+                            <div class="help-txt2">取款</div>
+                            <div class="help-Q">1.	Q:如何从{TITLE}账户中取款？
+                            	<span>
+                                	A： 只提供一种转帐方式，即网上银行转帐，提交点数取款申请之后，因取款申请完成时间因买家时间不定，请会员见谅并且耐心等待。以下为申请取款流程：<br/><br/>
+                                    Step 1: 点选取款选项<br/>
+                                    <br/><br/>
+                                    <div class="clear"></div>
+                                    Step 2:完善其取款银行资料，必须完善且真实性，请注意，取款帐号输入第一次后即锁定此帐号，客户无法自行更改，要更改帐户资料需恰线上客服并需提供帐户卡照片以及更改帐户所属的身份证照，由风控部分确定后才可以换帐户<br/>
+                                    <br/><br/>
+                                    <div class="clear"></div>
+                                    <span style="color:#F00;">取款注意事项</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;会员点数馀额必须1,000以上才可申请取款。若未达1000取款则需手续费50点。
+                                	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;单日可以免手续费取款2次，第3次则酌收手续费50点
+                                	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;託售完成时间因买家时间不定，请会员见谅并耐心等待，感谢你！
+                                </span>
+                            </div>
+                            
+                            <div class="help-Q">2.	Q:会员存款与取款时，如产生的手续费用欧赢承担吗？
+                            	<span>A：所有存取款银行收费均由用户自行承担和偿付，{TITLE}将不予办理。</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div id="tab4" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">我的帐户</div>
+                            <div class="help-txt2">会员个人资料</div>
+                            <div class="help-Q">1.	Q:如何在{TITLE}注册会员？
+                            	<span>A：请按照以下的流程注册:<br/><br/>
+								Step 1:点选首页下方的[立即开户]选项<br/>
+								<br/><br/>
+                                <div class="clear"></div>
+                                Step 2:阅读条款及合约，再打勾，点选[申请帐号]<br/>
+                                <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img11.jpg?v=4041" width="324" height="301" /><br/><br/>
+                                <div class="clear"></div>
+                                Step 3:填写个人讯息，并且手机号码接收验证码，请注意，手机号码必须是真实的而且可以接收简讯的，以便做手机认证<br/>
+                                <img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img12.jpg?v=4041" width="400" height="343" /><br/><br/>
+                                <div class="clear"></div>
+                                Step 3:输入验证码之后，即注册成功。
+                                </span>
+                            </div>
+                            
+                            <div class="help-Q">2.	Q:登入时，显示密码错误的提示，该如何解决？
+                            	<span>A：首先检查并确认您输入的密码是否正确，如问题持续，请点击首页下方的[忘记密码]，再输入您的帐号及注册手机号码，系统会自动发送新密码到您手机上，如无法改善您的问题，请洽询线上客服，线上客服将24小时为您服务。</span>
+                            </div>
+                            
+                            <div class="help-Q">3.	Q:我的个人资料安全吗？
+                            	<span>A：{TITLE}绝不泄露您的资料给第三方，除非收到法庭传单或可行性法律的要求及判决。我们有权通过网站向有关付款平服务商以及金融保险机构提供必要的个人讯息以完成付款要求。</span>
+                            </div>
+                            
+                            <div class="help-Q">4.	Q:我忘了用户名或密码该怎么办？
+                            	<span>A： (1)&nbsp;如果您忘记您的用户名则需要透过线上客服联系来查询您的用户名，客服也许会需要会员提供相应注册时的资料来供核对。<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;如果您忘记您的密码，只需在[忘记密码]里，输入您的用户名及注册时的手机号码即可找回您的密码。
+                                </span>
+                            </div>
+                            
+                            <div class="help-Q">5.	Q:我如何编辑我的个人讯息呢？
+                            	<span>A：在[会员专区]里，左边下方有一个[修改数据]的选项，点击进入后即可进行修改。</span>
+                            </div>
+                            
+                            <div class="help-Q">6.	Q:我该如何查询我的存款记录？
+                            	<span>A：在[会员专区]里，左下方有一选项[存款记录]，点击进入后即可查询，也可依照时间段查询。</span>
+                            </div>
+                            
+                            <div class="help-Q">7.	Q:我要在那里找到我的游戏记录及点数历程呢？
+                            	<span>A：在会员进入到游戏大厅之后，即可在左边选项栏位中的[游戏记录]，点数历程中查询。</span>
+                            </div>
+                            
+                            <div class="help-Q">8.	Q:我要如何才能查询我有效押码？
+                            	<span>A：会员进入到游戏大厅之后，在左边有一栏[有效押码]里查询，也可按照时间段来查询。</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div id="tab5" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">手机版</div>
+                            <div class="help-Q">
+                            	<span>
+                                	<a href="https://play.google.com/store/apps/details?id=air.BaccaratA&hl=zh_TW" target="_blank" >
+                                		<img src="http://{IMG_URL}/sites/{SITE}/images/help/h-img13.jpg" width="500" height="145" />
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="tab6" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">免责声明</div>
+                            <div class="help-txt2">欢迎来到[娱乐城]游戏平台</div>
+                            <div class="help-Q">为保障会员（以下简称甲方）使用国际系统技术支持（以下简称乙方）提供之<b>「娱乐城」</b><br/>
+											（以下简称本游戏）网页游戏服务的相关权益，请于注册登记使用本游戏之服务前，详细阅读以下规定。
+                            	<span></span>
+                            </div>
+                            
+                            <div class="help-Q">第一条 隐私权保护政策
+                            	<span>
+                                1.	对于甲方所登录之个人资料，乙方同意在未获得会员同意以前，不对外揭露会员之姓名、地址、电子邮件地址及其他依法受保护之个人资料，但下列情况不在此限：<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a)&nbsp;基于法律之规定； <br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)&nbsp;受司法、警察或其他有权机关基于法定程序之要求时；<br/> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)&nbsp;为维护公益或保护甲方或他人之财产及权益时； <br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(d)&nbsp;在紧急情况下为维护其他会员或第三人之人身安全。<br/><br/>
+                                2.  乙方不会向任何人士与公司出售甲方的个人资料。但在以下的情况下，甲方同意乙方可向其他人士或公司提供乙方的个人资料：<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a)&nbsp;需要与乙方之合作伙伴、为乙方执行工作的承包商或供货商，共享甲方的数据，才能够提供乙方所<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要求的产品或服务；<br/> 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)&nbsp;与其他人士或公司共享资料前取得甲方同意。
+								<span style="color:#F00;">※ 隐私权保护政策不适用于「娱乐城」以外的公司，也不适用于非「娱乐城」所雇用或管理的人员。</span>
+                                </span>
+                            </div>
+                            
+                            <div class="help-Q">第二条 免责事项
+                            	<span>
+								1.	乙方不保证甲方自网络上撷取数据的正确性与完整性，亦不保证数据的传输速率，甲方如因前述事由而发生直接或间接损失，乙方不负赔偿责任。<br/><br/> 
+								2.	乙方不负责甲方自身系统错误、设备故障所造成之损失及赔偿，且不保证各项服务与甲方自身使用软硬件之间具备绝对的兼容性。乙方之服务将于在线提供充份的免费试玩功能，供甲方确认自身之计算机软硬件设备是否兼容于乙方提供之服务，甲方不得事后再以系统不兼容等不合理理由进行求偿行为。<br/> <br/> 
+                                3.	乙方网站所刊登之商业广告及各种商品之促销信息，该等内容均系由广告商或商品服务提供商所提供，乙方不负担保责任，甲方应自行判断内容正确性及可信度。甲方于本网站或经由本网站与广告商之间的任何通讯与交易行为，皆与乙方无关，若有任何与广告商之间的纠纷与衍生损失，乙方不负任何责任。<br/><br/> 
+                                4.	本服务上的各种言论与意见等在线社群交流功能，系由网友自行上传与传播，乙方无法担保其真实性、完整性及可信度， 这些信息仅提供给甲方自行研究参考，并无对甲方作任何有关专业建议或暗示，甲方必须自行负担风险，若有任何衍生损失，乙方不负任何责任。<br/><br/> 
+                                5.	本服务相关网页上所提供之所有连结，可能连结到其他个人、公司或组织之网站，提供该等连结之目的，仅系为便利会员自行搜集或取得信息，乙方对于被连结之该等个人、公司或组织之网站上所提供之产品、服务，担保其真实性、完整性、实时性或可信度。
+                                 
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+  <!--遠端軟體教學開始-->                 
+                    
+                    <div id="tab7" class="tab_content">
+                        <div class="not_license-lin" style=" width:670px; padding-left:22px; color:#72718c; text-align:left;">
+                            <div class="help-txt1">AnyDesk使用教学流程</div>
+                            
+                            
+                            
+                            <div class="help-txt2">1.首先打开浏览器并且输入http://anydesk.com/remote-desktop
+画面将为您带到以下页面</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img01.jpg" width="500" height="330" /></div><br/><br/>
+                                        
+							<div class="help-txt2">2.点击正中间的[Download]选项</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img02.jpg" width="249" height="42" /></div><br/><br/>
+                            
+                            
+                            <div class="help-txt2">3.页面将带到下载页面并且开始下载选项</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img03.jpg" width="500" height="330" /></div><br/><br/>
+                            
+                              <div class="help-txt2">4.下载好时关闭页面，打开下载好的AnyDesk</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img04.jpg" width="101" height="114" /></div><br/><br/> 
+                            
+                            
+                              <div class="help-txt2">5.打开之后页面会带至如下(请参照备注1及备注2)</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img05.jpg" width="500" height="271" /></div><br/><br/> 
+                            
+                              <div style="line-height:25px;" class="help-txt2"><span style="color:#F00">备注1:</span> 红框的位置的图会遵照您对您本身计算机的设置体现出来并且产生一组数字，再请会员回报此数字给客服，再让客服处理您的问题<br/><br/>
+
+<span style="color:#F00">备注2:</span> 设定登入密码，点选<img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img06.jpg" width="171" height="30" />
+带至下页，在红框内键入密码，并且告知客服，再让客服处理您的问题
+</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img07.jpg" width="500" height="360" /></div><br/><br/> 
+                                        
+                              <div class="help-txt2">6.在我方收取到您给的数据后，我方连入时会在您的计算机上弹出以下框框，请按[接受]</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img08.jpg" width="300" height="420" /></div><br/><br/>       
+                                        
+                                        
+                              <div class="help-txt2">7.我方处理会员问题完毕时会请客服通知您，再烦请会员关闭AnyDesk的程序。</div>
+                              <div class="help-txt1">欲修改语系请按照下方流程修改</div>
+                              <div class="help-txt2">1.请点击右上方红圈的按钮</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img09.jpg" width="500" height="271" /></div><br/><br/>   
+                            
+                              <div class="help-txt2">2.点选[设定]按钮</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img10.jpg" width="250" height="122" /></div><br/><br/> 
+                              
+                              <div class="help-txt2">3.转跳到设定界面</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img11.jpg" width="500" height="196" /></div><br/><br/>   
+                            
+                              <div class="help-txt2">4.选取您要的语系</div>
+                            
+                            	<div class="clear"></div>
+                                       
+                                        <div class="help-tc-img"><img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img12.jpg" width="324" height="568" /></div><br/><br/>  
+                                <div class="help-txt2">5.再点选 <img src="http://{IMG_URL}/sites/{SITE}/images/help/t-img13.jpg" width="153" height="38" />
+                                </div>
+                                <div class="clear"></div>
+                                <div class="help-txt2">6.再关闭整个程序重开AnyDesk就会转换到您要的语言</div>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div><!-- 不可拿掉 -->
+                
+                </div><!--j1-box  end-->
+			
+            </div><!--zhenren end-->
+            
+            
+            
+            
+            
+   	</div>
+    </div>
+<!-- INCLUDE BLOCK : WEB_FOOTER -->
+</body>
+</html>

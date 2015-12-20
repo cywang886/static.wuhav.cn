@@ -1,0 +1,285 @@
+<script src="../../js/flash_detect_min.js" type="text/javascript"></script>
+<script src="../../Scripts/swfobject_modified.js" type="text/javascript"></script>
+<style>
+	ul, li { margin: 0; padding: 0; list-style: none; }
+	.msg-scroll {width: 950px; height: 29px; overflow: hidden; position: relative; }
+	.msg-scroll ul { position: absolute; }
+	.msg-scroll li {height: 29px; padding: 5px 0px 5px 0px; }
+	.spclick { cursor:pointer; }
+</style>
+<!-- 燈箱 -->
+<link rel="stylesheet" type="text/css" href="../../sites/{SITE}/style/colorbox.css"/>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.colorbox.js"></script>
+<script>
+	$(document).ready(function(){
+		//Examples of how to assign the Colorbox event to elements
+		$(".group1").colorbox({rel:'group1'});
+		$(".group2").colorbox({rel:'group2'});
+		$(".group3").colorbox({rel:'group3'});
+		$(".group9").colorbox({rel:'group3'});
+		$(".inline").colorbox({inline:true, width:"auto"});
+	});
+</script>
+<!-- 燈箱 -->
+
+<!---------------------- 浮動客服 -->
+<script type="text/javascript">
+	// 當網頁載入完
+	$('#abgne_float_ad').ready(function(){
+		var $win = $(window),
+			$ad = $('#abgne_float_ad').css('opacity', 0).show(),	// 讓廣告區塊變透明且顯示出來
+			_width = $ad.width(),
+			_height = $ad.height(),
+			_diffY = 20, _diffX = 20,	// 距離右及上方邊距
+			_moveSpeed = 800;	// 移動的速度
+		
+		// 先把 #abgne_float_ad 移動到定點
+		$ad.css({
+			top: _diffY,	// 往上
+			left: $win.width() - _width - _diffX,
+			opacity: 1
+		});
+		
+		// 幫網頁加上 scroll 及 resize 事件
+		$win.bind('scroll resize', function(){
+			var $this = $(this);
+			
+			// 控制 #abgne_float_ad 的移動
+			$ad.stop().animate({
+				top: $this.scrollTop() + _diffY,	// 往上
+				left: $this.scrollLeft() + $this.width() - _width - _diffX
+			}, _moveSpeed);
+		}).scroll();	// 觸發一次 scroll()
+		
+		// 關閉廣告
+		$('#abgne_float_ad .abgne_close_ad').click(function(){
+			$ad.hide();
+		});
+	});
+</script>
+<!---------------------- 浮動客服 end -->
+
+ 	<!---------------------------------------------------- 客服 -->
+    <div id="abgne_float_ad" >
+		<a href="#" onclick="javascript:window.open('../../app/service.php','service_win', config='height=650,width=1200');"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/web-seo-title.png?v=5555" width="148" height="283" /></a>
+        
+        <div class="We">
+			<a class="group1" href="http://{IMG_URL}/sites/{SITE}/images/service/w-150522.jpg" title="請掃描QRcode"><span>jo888net</span></a>
+        </div>
+        
+        <div class="QQ">
+        	<a class="group2" href="http://{IMG_URL}/sites/{SITE}/images/service/QQ-code.jpg" title="請掃描QRcode"><span>3115802892</span></a>
+        </div>
+
+        <span class="abgne_close_ad">{_Close} [X]</span>
+	</div>
+    <!---------------------------------------------------- 客服 -->
+    
+    
+    
+    <!-- 手機遊戲
+    
+<style>
+.dl_bk { border:1px solid #fff; font-size: 13px; background-image: url(http://{IMG_URL}/sites/{SITE}/images/{LANGX}/download_android_1.jpg?v=88888); background-repeat: no-repeat; height: 264px; width: 196px; }
+.dl_img1 { margin: 58px 0 0 10px; float:left; z-index:2; }
+.dl_img2 { margin: 8px 0 0 10px; float:left; z-index:2; }
+.dl_img3 { margin: 8px 0 0 10px; float:left; z-index:2; }
+.dl_text1 { margin: 63px 9px 0 0; text-align: right; }
+.dl_text2 { margin: 12px 9px 0 0; text-align: right; }
+.dl_text3 { margin: 12px 9px 0 0; text-align: right; }
+.dl_text3 a{ color:#FF0; text-decoration:none;}
+.dl_text3 a:hover{ color: #F60;}
+.dl_text1 a{ color:#FF0; text-decoration:none;}
+.dl_text1 a:hover{ color: #F60;}
+.dl_text2 a{ color:#FF0; text-decoration:none;}
+.dl_text2 a:hover{ color: #F60;}
+.dl_btn1 { margin: 7px 18px 0 0; text-align: right; }
+.dl_btn2 { margin: 7px 18px 0 0; text-align: right; }
+.dl_btn3 { margin: 7px 18px 0 0; text-align: right; }
+</style>
+<script type="text/javascript">
+	// 當網頁載入完
+	$(window).load(function(){
+		var $win = $(window),
+			$ad = $('#abgne_float_ad-9').css('opacity', 0).show(),	// 讓廣告區塊變透明且顯示出來
+			_width = $ad.width(),
+			_height = $ad.height(),
+			_diffY = 20, _diffX = 20,	// 距離左及上方邊距
+			_moveSpeed = 800;	// 移動的速度
+		
+		// 先把 #abgne_float_ad 移動到定點
+		$ad.css({
+			top: _diffY,	// 往上
+			left:  _diffX,	// 往左
+			opacity: 1
+		});
+		
+		// 幫網頁加上 scroll 及 resize 事件
+		$win.bind('scroll resize', function(){
+			var $this = $(this);
+			
+			// 控制 #abgne_float_ad 的移動
+			$ad.stop().animate({
+				top: $this.scrollTop() + _diffY,	// 往上
+				left: $this.scrollLeft() + _diffX	// 往左
+			}, _moveSpeed);
+		}).scroll();	// 觸發一次 scroll()
+		
+		// 關閉廣告
+		$('#abgne_float_ad-9 .abgne_close_ad-9').click(function(){
+			$ad.hide();
+		});
+	});
+</script>
+<div id="abgne_float_ad-9" >
+    <div style="width:210px; float:left;" align="center">
+          <div class="dl_bk">
+          
+            <div class="dl_img1">
+            	<a class="group9" href="http://{IMG_URL}/sites/{SITE}/images/Baccarat.jpg?v=5550055" title="真人視訊百家樂">
+                	<img src="http://{IMG_URL}/sites/{SITE}/images/Baccarat.jpg?v=5556655" width="59" height="59" />
+                </a>
+            </div>
+            
+            <div class="dl_text1">
+            	<a href="../app/page.php?page=game_baccarat" target="_blank">说明</a>
+            </div>
+            
+            <div class="dl_btn1">
+            	<a href="http://lobby.bz8588.com/sites/10/apk/Baccarat.apk">
+            		<img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png" width="105" height="33" border="0" onmouseover="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_over.png'" onmouseout="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png'" />
+                </a>
+            </div>
+            
+            <div class="clear"></div>
+            
+           <div class="dl_img2"><a class="group9" href="http://{IMG_URL}/sites/{SITE}/images/BlackJack21.jpg?v=44445" title="21點"><img src="http://{IMG_URL}/sites/{SITE}/images/BlackJack21.jpg?v=44445" width="59" height="59" /></a></div>
+        <div class="dl_text2"><a href="../../app/page.php?page=game_blackjack" target="_blank">说明</a></div>
+        <div class="dl_btn2" style="margin-top:9px;"><a href="http://lobby.bz8588.com/sites/10/apk/BlackJack21.apk"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png" width="105" height="33" border="0" onmouseover="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_over.png'" onmouseout="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png'" /></a></div>
+        
+        
+        	<div class="clear"></div>
+        <div class="dl_img3"><a class="group9" href="http://{IMG_URL}/sites/{SITE}/images/5PK.jpg?v=444555" title="5PK"><img src="http://{IMG_URL}/sites/{SITE}/images/5PK.jpg?v=44455" width="59" height="59" /></a></div>
+        <div class="dl_text3"><a href="../../app/page.php?page=game_5PK" target="_blank">说明</a></div>
+        <div class="dl_btn3" style="margin-top:11px;"><a href="http://lobby.bz8588.com/sites/10/apk/5PKL.apk"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png" width="105" height="33" border="0" onmouseover="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_over.png'" onmouseout="this.src='http://{IMG_URL}/sites/{SITE}/images/{LANGX}/btn_download_up.png'" /></a></div>
+          </div>
+        </div>
+	<span class="abgne_close_ad-9" style="margin:6px 0px 0px 10px; float:left;">{_Close} [X]</span>
+</div>
+ 手機遊戲_end-->
+
+
+
+
+<div class="in-top-box2">
+	<div class="in-top-box2-con">
+    
+		<div class="logo-1">
+        	<!--<a href="../../app/index.php"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/logo.png?v=7778" width="183" height="87" /></a>-->
+        	  <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="183" height="87">
+        	    <param name="movie" value="http://{IMG_URL}/sites/{SITE}/images/logo.swf" />
+        	    <param name="quality" value="high" />
+        	    <param name="wmode" value="transparent" />
+        	    <param name="swfversion" value="15.0.0.0" />
+        	    <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+        	    <param name="expressinstall" value="../../../../Scripts/expressInstall.swf" />
+        	    <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+        	    <!--[if !IE]>-->
+        	    <object type="application/x-shockwave-flash" data="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/logo.png?v=02" width="183" height="87">
+        	      <!--<![endif]-->
+        	      <param name="quality" value="high" />
+        	      <param name="wmode" value="transparent" />
+        	      <param name="swfversion" value="15.0.0.0" />
+        	      <param name="expressinstall" value="../../../../Scripts/expressInstall.swf" />
+        	      <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+        	      <div>
+        	        <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+        	        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" width="112" height="33" /></a></p>
+      	        </div>
+        	      <!--[if !IE]>-->
+      	      </object>
+        	    <!--<![endif]-->
+      	    </object>
+        </div>
+		<div class="menuboder"></div>
+        
+        
+   		<div class="menu-btn"><!-- 回首頁 -->
+   			<a href="../../app/index.php"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-1.png?v=7777" width="87" height="87" /></a>
+     	</div>
+     	<div class="menuboder"></div>
+        
+        
+		<!-- START BLOCK : GAME -->
+    	<div class="menu-btn">
+        	<a href="javascript:void(0);" onclick="openurl('');">
+            	<img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-8.png?v=7777" width="87" height="87" />
+            </a>
+        </div>
+        <div class="menuboder"></div>
+        
+		<script type="text/javascript">
+			function openurl(s){
+			var gurl = '../../app/lobby.php?ss='+s;
+			var son_win = open_window(gurl,'game',1024,768,1);
+			if(son_win != null && son_win.open){
+			}else{
+				alert('{_OpenWindowAlert}');
+					location.replace(gurl);
+				}
+			}
+		</script>
+		<!-- END BLOCK : GAME -->
+ 		
+        
+        
+        
+   		<div class="menu-btn"><a href="../../app/game.php"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-3.png?v=7777" width="87" height="87" /></a></div>
+   		<div class="menuboder"></div>
+                
+        <div class="menu-btn"><a href="../../app/game_apk.php" target="_new"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-5-1.png?v=777" width="87" height="87" /></a></div>
+        <div class="menuboder"></div>
+        
+     	<div class="menu-btn"><a href="../../app/page.php?page=preferential"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-7.png?v=7777" width="87" height="87" /></a></div>
+   		<div class="menuboder"></div>
+        
+    	<div class="menu-btn"><a href="../../app/notice.php"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-4.png?v=7777" width="87" height="87" /></a></div>
+    	<div class="menuboder"></div>
+        
+    	<div class="menu-btn"><a href="{MEM_URL}"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-6.png?v=7777" width="87" height="87" /></a></div>
+    	<div class="menuboder"></div>
+        
+    	<!--div class="menu-btn"><a href="../../app/about.php"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-2.png?v=7777" width="87" height="87" /></a></div>
+    	<div class="menuboder"></div-->
+                
+ 		<div id="id_auction" class="menu-btn">
+        	<a href="{MEM_URL2}"><img src="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/top-bn-9-2.png?v=4464" width="87" height="87" />
+            </a>
+        </div>
+ 		<!-- START BLOCK : AUCTION -->
+        <!-- END BLOCK : AUCTION -->
+        <div class="menuboder"></div>
+	</div>
+</div>
+
+
+			<div class="in-newsbox">
+                <div class="in-newsbox-con">
+                    <div class="in-news-all">
+                        <div class="in-newsboxh4">NEWS： </div>
+                        <marquee scrollamount="2" scrolldelay="0" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                            <a href="../../app/history_msg.php">
+                                <ul>
+									<!-- START BLOCK : MSG -->
+									<li style="display: inline;">{MARQUEE}</li>
+									<!-- END BLOCK : MSG -->
+								</ul>
+                            </a>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+
+
+

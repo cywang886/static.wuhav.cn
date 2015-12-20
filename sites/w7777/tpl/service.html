@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../sites/{SITE}/style/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../sites/{SITE}/style/clearfix.css"/>
+<!-- INCLUDE BLOCK : WEB_SCRIPT -->
+<!-- 燈箱 -->
+<link rel="stylesheet" type="text/css" href="../sites/{SITE}/style/colorbox.css"/>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.colorbox.js"></script>
+<script>
+	$(document).ready(function(){
+		//Examples of how to assign the Colorbox event to elements
+		$(".group1").colorbox({rel:'group1'});
+		$(".group2").colorbox({rel:'group2'});
+		$(".group3").colorbox({rel:'group3'});
+		$(".inline").colorbox({inline:true, width:"auto"});
+	});
+</script>
+<!-- 燈箱 -->
+<title>客服系统</title>
+</head>
+
+<body style="background-color:#1c1b2a;">
+	<div style=" background:url(http://{IMG_URL}/sites/{SITE}/images/service/bg.jpg) repeat-x; float:left; height:752px; width:100%;">
+    	<div class="sv-top-box1">
+        	<div class="sv-top-box-con"></div>
+        </div>
+        <div class="sv-con-box1">
+        	<div class="sv-con-box-con">
+            	<div class="s-img01">
+					<a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=deposit', '_blank', config='width=500px, height=300px');">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/service/s-img01.png" width="123" height="172" />
+                    </a>
+                </div>
+                <div class="s-img01">
+                	<a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=withdraw', '_blank', config='width=500px, height=300px');">
+						<img src="http://{IMG_URL}/sites/{SITE}/images/service/s-img02.png" width="123" height="172" />
+                    </a>
+                </div>
+                <div class="s-img01">
+					<a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=other', '_blank', config='width=500px, height=300px');">
+                    	<img src="http://{IMG_URL}/sites/{SITE}/images/service/s-img03.png" width="123" height="172" />
+                    </a>
+                </div>
+                
+                <div class="s-img02">
+                	<a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=other', '_blank', config='width=500px, height=300px');"></a>
+                </div>
+                
+                <div class="s-img03">
+                	<a class="group3" href="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/WE-img.jpg" title="請掃描QRcode"></a>
+                </div>
+                
+                <div class="s-img03">
+                	<a class="group2" href="http://{IMG_URL}/sites/{SITE}/images/{LANGX}/QQ-img.jpg" title="請掃描QRcode"></a>
+                </div>
+                
+                
+                
+                
+                <div class="clear"></div>
+				<div class="s-txt"><a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=deposit', '_blank', config='width=500px, height=300px');">存款</a></div>
+                <div class="s-txt"><a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=withdraw', '_blank', config='width=500px, height=300px');">取款</a></div>
+                <div class="s-txt"><a href="javascript:void(0)" onclick="window.open('http://livehelp.w7777.net/webchat.php?username={Username}&subject=other', '_blank', config='width=500px, height=300px');">其他问题</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
